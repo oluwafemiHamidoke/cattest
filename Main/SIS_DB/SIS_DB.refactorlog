@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="15cf3d9a-b5c3-4f10-ba44-e6cd55a5446d" ChangeDateTime="08/12/2019 17:20:50">
+    <Property Name="ElementName" Value="[sis].[PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dbe80d39-d740-4997-a27a-3b488d875cf6" ChangeDateTime="08/12/2019 18:10:17">
+    <Property Name="ElementName" Value="[sis].[PartsManualSection_Translation]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4f29bbdf-30e5-471e-b119-6fae55f797bd" ChangeDateTime="08/12/2019 18:12:24">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2928a8df-2d70-4060-9a13-f7b5610ebf3e" ChangeDateTime="08/12/2019 18:14:00">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence_Effectivity]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Effectivity]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a05ace1-5588-4e2e-ba1c-52a121ad4880" ChangeDateTime="08/12/2019 18:15:29">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence_Translation]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fabcb9c0-b042-42bc-8503-cdf255ef3a4b" ChangeDateTime="08/12/2019 18:18:24">
+    <Property Name="ElementName" Value="[sis].[MediaSection].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c7a6df2b-bce8-4ba5-b778-3eb17b019cfb" ChangeDateTime="08/12/2019 18:19:40">
+    <Property Name="ElementName" Value="[sis].[PK_PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e00c95fe-9708-4d27-8f98-7d2e572506fe" ChangeDateTime="08/12/2019 18:19:54">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSection_Media]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSection_Media]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d90ca415-b337-414f-8d91-c4f28a42821d" ChangeDateTime="08/12/2019 18:24:58">
+    <Property Name="ElementName" Value="[sis].[MediaSection_Translation].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4b562a75-fc9b-4ba2-a00e-41a2940662a0" ChangeDateTime="08/12/2019 18:25:18">
+    <Property Name="ElementName" Value="[sis].[PK_PartsManualSection_Translation]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5299b76b-82a7-4692-bec0-40fcf16100d5" ChangeDateTime="08/12/2019 18:25:38">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSection_Translation_Language]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSection_Translation_Language]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="08ab5c21-a87f-4f21-aa4c-76e939acc3ff" ChangeDateTime="08/12/2019 18:26:01">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSection_Translation_PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSection_Translation_MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4169e324-7512-46b5-bdf0-6c413433f24e" ChangeDateTime="08/12/2019 18:31:09">
+    <Property Name="ElementName" Value="[sis].[MediaSequence].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b8d6f436-8069-41f0-9b00-d100c88adec1" ChangeDateTime="08/13/2019 12:58:06">
+    <Property Name="ElementName" Value="[sis].[MediaSequence].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="55f91992-b464-475a-bfc6-0480c4c6a966" ChangeDateTime="08/13/2019 12:58:25">
+    <Property Name="ElementName" Value="[sis].[PK_PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f80a02d0-9de6-4515-b65d-f18bc56005f3" ChangeDateTime="08/13/2019 12:58:38">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_IEPart]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_IEPart]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="feac379b-423a-4858-83cb-3adffa4279c6" ChangeDateTime="08/13/2019 12:58:59">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ed3ba150-8c4e-400c-86d7-99dec72b6337" ChangeDateTime="08/13/2019 12:59:30">
+    <Property Name="ElementName" Value="[sis].[MediaSequence_Effectivity].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="268f9c07-212e-4b16-bb0a-e9fab8b65c85" ChangeDateTime="08/13/2019 12:59:46">
+    <Property Name="ElementName" Value="[sis].[PK_PartsManualSequence_Effectivity]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Effectivity]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7aabc61b-5b2a-4694-bc73-ed991426ad1e" ChangeDateTime="08/13/2019 13:00:08">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_Effectivity_PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_Effectivity_MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2c9ae6a9-269b-422f-8917-d33d1c82203a" ChangeDateTime="08/13/2019 13:00:21">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_Effectivity_SerialNumberPrefix]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_Effectivity_SerialNumberPrefix]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d848c7c1-954f-4bce-9b69-2596ce011bf3" ChangeDateTime="08/13/2019 13:00:40">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_Effectivity_SerialNumberRange]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_Effectivity_SerialNumberRange]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2fce1a71-710d-4afa-9fab-49cf04647aca" ChangeDateTime="08/13/2019 13:01:11">
+    <Property Name="ElementName" Value="[sis].[MediaSequence_Translation].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8b382cd0-786a-4831-abb2-6e3136424e51" ChangeDateTime="08/13/2019 13:01:27">
+    <Property Name="ElementName" Value="[sis].[PK_PartsManualSequence_Translation]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="67044b5b-edd9-438a-b70e-72d610deb1cd" ChangeDateTime="08/13/2019 13:01:39">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_Translation_Language]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_Translation_Language]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ab0408b7-0cf0-44cb-8f0b-2e1aeebf7d58" ChangeDateTime="08/13/2019 13:01:56">
+    <Property Name="ElementName" Value="[sis].[FK_PartsManualSequence_Translation_PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MediaSequence_Translation_MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f72602d2-ec55-4ef7-ae83-014d4f40bdc8" ChangeDateTime="08/13/2019 15:43:34">
+    <Property Name="ElementName" Value="[sis].[PartsManualSection_Merge]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Merge]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6688a4e7-5669-4f6d-8786-f795ed981f6f" ChangeDateTime="08/13/2019 15:43:59">
+    <Property Name="ElementName" Value="[sis].[PartsManualSection_Translation_Merge]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Translation_Merge]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="771061fd-8b0a-4b81-97d3-5679b7f59104" ChangeDateTime="08/13/2019 15:44:20">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence_Effectivity_Merge]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Effectivity_Merge]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f666e1be-3c99-4d6c-91de-27e034874c45" ChangeDateTime="08/13/2019 15:44:40">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence_Merge]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Merge]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ff8e1cbd-c86e-449f-96b6-9c78d1484ee3" ChangeDateTime="08/13/2019 15:44:59">
+    <Property Name="ElementName" Value="[sis].[PartsManualSequence_Translation_Merge]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[sis]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Translation_Merge]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5cfdf8bc-1219-4179-b503-a758ce1dc9f3" ChangeDateTime="08/13/2019 17:58:42">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="012486b3-ea57-4c97-91d9-9347cae379e7" ChangeDateTime="08/13/2019 17:58:58">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSection].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="47f2d8a8-6175-45ff-bf24-914a348caaf1" ChangeDateTime="08/13/2019 17:59:12">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSection]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ccac3b02-c78b-4232-920f-ef339498c567" ChangeDateTime="08/13/2019 18:02:08">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSection_Diff]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1c9f14dc-4902-4320-97d5-13604352cd22" ChangeDateTime="08/13/2019 18:02:23">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSection_Diff].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="16a9fc87-eb1f-4d94-9c1d-604bcca910b5" ChangeDateTime="08/13/2019 18:02:39">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSection_Diff]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0642ec07-cbed-4500-bb42-a49aef3cb490" ChangeDateTime="08/13/2019 18:04:14">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSection_Key]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Key]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="18068ac6-3386-4c73-8579-e63d2d0b5573" ChangeDateTime="08/13/2019 18:04:31">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSection_Key].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Key]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4d23274b-8495-4e7d-88f8-fe355dbbc1e0" ChangeDateTime="08/13/2019 18:04:44">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSection_Key]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Key]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection_Key]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9a020cbe-e5a3-4e42-8609-5edbf03d070b" ChangeDateTime="08/13/2019 18:07:11">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSection_Translation]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="984c0405-ab49-4ffe-8575-16948c654e8b" ChangeDateTime="08/13/2019 18:07:25">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSection_Translation].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="137e7c49-8d62-45c0-84a2-8b0972ab246c" ChangeDateTime="08/13/2019 18:07:38">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSection_Translation]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1589133b-1d88-4198-8017-9456ea306e91" ChangeDateTime="08/13/2019 18:10:52">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSection_Translation_Diff]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSection_Translation_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e84c8397-9bab-4aa2-8c99-3cac6bb70058" ChangeDateTime="08/13/2019 18:11:07">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSection_Translation_Diff].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Translation_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="833fa8a8-7dad-4b0e-b920-d3992efed7e5" ChangeDateTime="08/13/2019 18:11:21">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSection_Translation_Diff]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSection_Translation_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSection_Translation_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7798bd7a-db22-4624-971b-783c57cdc844" ChangeDateTime="08/13/2019 18:13:27">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f2f18026-5f7a-4022-ab85-59b8e27e37ca" ChangeDateTime="08/13/2019 18:13:45">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c4c7615f-3221-4728-ae0f-00be652551d2" ChangeDateTime="08/13/2019 18:14:00">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1c174433-a44e-4e82-ab5f-18ce24c070ed" ChangeDateTime="08/13/2019 18:14:16">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d2f314bb-3e54-41f1-bb05-5b8ad3ad58a7" ChangeDateTime="08/13/2019 18:16:31">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Diff]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fc28b900-257b-455b-bd04-8dcaa2faa20f" ChangeDateTime="08/13/2019 18:16:44">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Diff].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0ae0352e-08f6-44dd-acce-835f4ba80558" ChangeDateTime="08/13/2019 18:16:57">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Diff].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f08e6936-bd11-4ae5-b2ea-63a95bf8f69b" ChangeDateTime="08/13/2019 18:17:14">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Diff]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6ac8c972-ec43-4fde-8942-33052e0ad9cd" ChangeDateTime="08/13/2019 18:19:57">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Effectivity]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Effectivity]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b961aac9-bdee-4ade-9460-897b89abfd0c" ChangeDateTime="08/13/2019 18:20:12">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Effectivity].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="62f10704-dbb8-4330-a411-957ef8b1f2de" ChangeDateTime="08/13/2019 18:20:40">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Effectivity]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Effectivity]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Effectivity]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="28ec3490-4ceb-4f33-938f-4e9c90c3960c" ChangeDateTime="08/13/2019 18:22:00">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Effectivity_Diff]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Effectivity_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0556b63b-7a31-433d-9b8b-3e793b56a597" ChangeDateTime="08/13/2019 18:22:15">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Effectivity_Diff].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Effectivity_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="051f8194-f7b4-46ea-8c54-6da048417267" ChangeDateTime="08/13/2019 18:22:32">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Effectivity_Diff]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Effectivity_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Effectivity_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b34d4432-d08e-4d5d-9b82-75380a1933f8" ChangeDateTime="08/13/2019 18:25:01">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Key]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Key]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0904ee2b-e973-4e4a-be15-5fa5001fcc6a" ChangeDateTime="08/13/2019 18:25:17">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Key].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Key]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="df52fde6-637e-4388-90a9-754a04798147" ChangeDateTime="08/13/2019 18:25:32">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Key].[PartsManualSection_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Key]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSection_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e1b22a21-6240-4fd5-b7a6-50d72c04b094" ChangeDateTime="08/13/2019 18:25:44">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Key]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Key]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Key]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="52599ed1-88d8-4c16-b94e-2724922e81f1" ChangeDateTime="08/13/2019 18:27:09">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Translation]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4514d9e6-0771-450d-8694-7782e27ade40" ChangeDateTime="08/13/2019 18:27:22">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Translation].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ef752e52-a5ea-43b3-8a59-79d71f2d6cd9" ChangeDateTime="08/13/2019 18:27:34">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Translation]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Translation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Translation]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="72cd0f36-7252-43cd-9848-68798b387ba6" ChangeDateTime="08/13/2019 18:29:32">
+    <Property Name="ElementName" Value="[sis_stage].[PartsManualSequence_Translation_Diff]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[sis_stage]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[MediaSequence_Translation_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="958519ec-340e-4aac-9b92-8da28242a348" ChangeDateTime="08/13/2019 18:29:45">
+    <Property Name="ElementName" Value="[sis_stage].[MediaSequence_Translation_Diff].[PartsManualSequence_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Translation_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[MediaSequence_ID]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bb772ac1-9dbe-4ec1-be6c-dd6dec7d2079" ChangeDateTime="08/13/2019 18:29:59">
+    <Property Name="ElementName" Value="[sis_stage].[PK_PartsManualSequence_Translation_Diff]" />
+    <Property Name="ElementType" Value="SqlPrimaryKeyConstraint" />
+    <Property Name="ParentElementName" Value="[sis_stage].[MediaSequence_Translation_Diff]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[PK_MediaSequence_Translation_Diff]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d82bce73-58cc-482f-951d-2c71cfe0c439" ChangeDateTime="08/25/2020 12:21:16">
+    <Property Name="ElementName" Value="[sis].[Kit].[KitNote]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Kit_Note" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f97ac5a5-b283-4580-a420-d55438cacf33" ChangeDateTime="09/01/2020 14:42:20">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Kit_PartType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="afe5e8f1-0e66-4dbb-a9bb-27280d4763a1" ChangeDateTime="09/01/2020 14:42:24">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="41f44272-6bc0-4dd3-a946-14e938c955fe" ChangeDateTime="09/01/2020 14:42:31">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_Display_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Display_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="330830c0-d2f1-412b-be3f-c984c34276fc" ChangeDateTime="09/01/2020 14:42:34">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_PartType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PartType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="26600f68-2daa-49ec-b3e9-3b2b6bada69f" ChangeDateTime="09/01/2020 14:42:37">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_Note]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Note" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3ac783a9-89a2-49d2-a11a-c85dc7a3c9ac" ChangeDateTime="09/01/2020 14:43:55">
+    <Property Name="ElementName" Value="[sis].[KitCategory].[KitCategory_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[KitCategory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c01641dc-53da-42e0-b776-89bc502d3900" ChangeDateTime="09/01/2020 14:44:45">
+    <Property Name="ElementName" Value="[sis].[KitComponent].[KitComponent_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[KitComponent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="155d864f-e76d-4509-acee-5d7db8db3619" ChangeDateTime="09/01/2020 14:45:56">
+    <Property Name="ElementName" Value="[sis].[KitSubCategory].[KitSubCategory_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[KitSubCategory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d20704ec-7755-4f76-9a1c-b3fde21f1dcd" ChangeDateTime="09/01/2020 14:46:44">
+    <Property Name="ElementName" Value="[sis].[KitType].[KitType_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[KitType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b148870b-f8dc-40c8-8aa4-b297490969b2" ChangeDateTime="09/01/2020 14:46:57">
+    <Property Name="ElementName" Value="[sis].[KitComponent].[KitComponent_Number]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[KitComponent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Number" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3a65874f-5aea-4916-865b-883b17026e10" ChangeDateTime="09/01/2020 14:47:06">
+    <Property Name="ElementName" Value="[sis].[Kit].[Kit_Number]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Number" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="aaffc794-3bb1-46fa-bc8d-197ee211b64b" ChangeDateTime="09/01/2020 14:50:11">
+    <Property Name="ElementName" Value="[sis].[Kit].[PartType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis].[Kit]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Part_Type" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7228cddb-376b-473a-a96b-e8b6413cc955" ChangeDateTime="03/19/2021 12:12:17">
+    <Property Name="ElementName" Value="[sis_stage].[IESCN_Relation].[IESCN]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[IESCN_Relation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IE_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f903e55d-3037-4718-b03a-634aaaacc211" ChangeDateTime="03/19/2021 12:12:29">
+    <Property Name="ElementName" Value="[sis_stage].[IESCN_Relation].[Related_IESCN]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[sis_stage].[IESCN_Relation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Related_IE_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="83677db0-d02a-46f4-90b5-e6749ddafc2a" ChangeDateTime="04/26/2021 14:43:07">
+    <Property Name="ElementName" Value="[SISSEARCH].[REF_SELECTIVE_EXCLUDEINFOTYPE].[Excluded_MEDIAORIGIN]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SISSEARCH].[REF_SELECTIVE_EXCLUDEINFOTYPE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Excluded_Values]" />
+  </Operation>
+</Operations>

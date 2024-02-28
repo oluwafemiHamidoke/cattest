@@ -1,0 +1,1939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SIS_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{70cf1ac7-023a-47e9-bb5f-48194fccf55a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SIS_DB</RootNamespace>
+    <AssemblyName>SIS_DB</AssemblyName>
+    <ModelCollation>1033,CS</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CS_AS</DefaultCollation>
+    <AnsiNulls>True</AnsiNulls>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <QueryStoreCaptureMode>Auto</QueryStoreCaptureMode>
+    <QueryStoreDesiredState>ReadWrite</QueryStoreDesiredState>
+    <QueryStoreFlushInterval>900</QueryStoreFlushInterval>
+    <QueryStoreStatsInterval>60</QueryStoreStatsInterval>
+    <QueryStoreMaxPlansPerQuery>200</QueryStoreMaxPlansPerQuery>
+    <QueryStoreStaleQueryThreshold>30</QueryStoreStaleQueryThreshold>
+    <QueryStoreMaxStorageSize>1024</QueryStoreMaxStorageSize>
+    <DbScopedConfigLegacyCardinalityEstimation>Off</DbScopedConfigLegacyCardinalityEstimation>
+    <DbScopedConfigMaxDOP>8</DbScopedConfigMaxDOP>
+    <DbScopedConfigParameterSniffing>On</DbScopedConfigParameterSniffing>
+    <DbScopedConfigOptimizerHotfixes>Off</DbScopedConfigOptimizerHotfixes>
+    <DelayedDurability>DISABLED</DelayedDurability>
+    <AutoCreateStatisticsIncremental>False</AutoCreateStatisticsIncremental>
+    <MemoryOptimizedElevateToSnapshot>False</MemoryOptimizedElevateToSnapshot>
+    <Containment>None</Containment>
+    <IsNestedTriggersOn>True</IsNestedTriggersOn>
+    <IsTransformNoiseWordsOn>False</IsTransformNoiseWordsOn>
+    <TwoDigitYearCutoff>2049</TwoDigitYearCutoff>
+    <NonTransactedFileStreamAccess>OFF</NonTransactedFileStreamAccess>
+    <TargetRecoveryTimePeriod>60</TargetRecoveryTimePeriod>
+    <TargetRecoveryTimeUnit>SECONDS</TargetRecoveryTimeUnit>
+    <IsChangeTrackingOn>True</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>7</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>True</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>CHECKSUM</PageVerify>
+    <ServiceBrokerOption>EnableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>True</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <CompatibilityMode>150</CompatibilityMode>
+    <AnsiNullDefault>False</AnsiNullDefault>
+    <AnsiPadding>False</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <ArithAbort>False</ArithAbort>
+    <ConcatNullYieldsNull>False</ConcatNullYieldsNull>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>GLOBAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <DacVersion>2.0</DacVersion>
+    <DbScopedConfigMaxDOPSecondary>1</DbScopedConfigMaxDOPSecondary>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CatalogCollation>SQL_Latin1_General_CP1_CI_AS</CatalogCollation>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="sis\" />
+    <Folder Include="sis\Tables\" />
+    <Folder Include="sis_shadow\" />
+    <Folder Include="sis_shadow\Tables\" />
+    <Folder Include="sis_shadow\Synonyms\" />
+    <Folder Include="SISSEARCH\" />
+    <Folder Include="SISSEARCH\Tables\" />
+    <Folder Include="SISWEB_OWNER\" />
+    <Folder Include="SISWEB_OWNER\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Types\" />
+    <Folder Include="PRODUCTSEARCH\" />
+    <Folder Include="PRODUCTSEARCH\Tables\" />
+    <Folder Include="sis\Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="SISSEARCH\Stored Procedures\" />
+    <Folder Include="sis\Stored Procedures\" />
+    <Folder Include="sis\Synonyms\" />
+    <Folder Include="PRODUCTSEARCH\Stored Procedures\" />
+    <Folder Include="sis\Sequences\" />
+    <Folder Include="sis_stage" />
+    <Folder Include="sis_stage\Tables" />
+    <Folder Include="sis_stage\Types" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="sis_stage\Stored Procedures" />
+    <Folder Include="SIS_AUTHORING" />
+    <Folder Include="SIS_AUTHORING\Tables" />
+    <Folder Include="Deploy Scripts" />
+    <Folder Include="Scripts\" />
+    <Folder Include="sis_stage\Sequences" />
+    <Folder Include="SOC" />
+    <Folder Include="SOC\Tables" />
+    <Folder Include="Deploy Scripts\Lookup Tables" />
+    <Folder Include="sis\Functions" />
+    <Folder Include="sis\Types" />
+    <Folder Include="SISWEB_OWNER_STAGING\" />
+    <Folder Include="SISWEB_OWNER_STAGING\Tables\" />
+    <Folder Include="SISWEB_OWNER_STAGING\Stored Procedures\" />
+    <Folder Include="SISWEB_OWNER_STAGING\Functions" />
+    <Folder Include="SISWEB_OWNER_STAGING\Views" />
+    <Folder Include="KIM\" />
+    <Folder Include="KIM\Tables\" />
+    <Folder Include="CDS\" />
+    <Folder Include="CDS\Tables\" />
+    <Build Include="CDS\Tables\CDS_CIDCodeDetails.sql" />
+    <Build Include="CDS\Tables\CDS_FMICodeDetails.sql" />
+    <Build Include="CDS\Tables\CDS_MIDCodeDetails.sql" />
+    <Build Include="CDS\Tables\CDS_TroubleshootingInfo.sql" />
+    <Build Include="CDS\Tables\CDS_BlobDetails.sql" />
+    <Build Include="CDS\Tables\CDS_TroubleshootingConfigurationInfo.sql" />
+    <Build Include="CDS\Tables\CDS_ConfigurationInfo.sql" />
+    <Folder Include="Deploy Scripts\IE_Effectivity" />
+    <Folder Include="admin\" />
+    <Folder Include="admin\Tables\" />
+    <Folder Include="SISSEARCH\Views" />
+    <Folder Include="SISSEARCH\Functions" />
+    <Folder Include="SISWEB_OWNER_SWAP\" />
+    <Folder Include="SISWEB_OWNER_SWAP\Tables\" />
+    <Folder Include="SISWEB_OWNER_SHADOW\" />
+    <Folder Include="SISWEB_OWNER_SHADOW\Tables\" />
+    <Folder Include="util\" />
+    <Folder Include="util\Tables\" />
+    <Folder Include="util\Stored Procedures\" />
+    <Folder Include="admin\Stored Procedures" />
+    <Folder Include="util\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="SISWEB_OWNER_STAGING\Sequences\" />
+    <Folder Include="SISWEB_OWNER\Sequences\" />
+    <Folder Include="admin\Views" />
+    <Folder Include="EXTERNAL" />
+    <Folder Include="EXTERNAL\Views" />
+    <Folder Include="EMP_STAGING\" />
+    <Folder Include="EMP_STAGING\Stored Procedures" />
+    <Folder Include="EMP_STAGING\Functions" />
+    <Folder Include="EMP_STAGING\Tables" />
+    <Folder Include="etl_stage\" />
+    <Folder Include="etl_stage\Sequences" />
+    <Folder Include="etl_stage\Stored Procedures" />
+    <Folder Include="etl_stage\Functions" />
+    <Folder Include="etl_stage\Tables" />
+    <Folder Include="SISWEB_OWNER\Stored Procedures\" />
+    <Folder Include="SISWEB_OWNER\Functions\" />
+    <Folder Include="SIS_REPORT\" />
+    <Folder Include="SIS_REPORT\Tables\" />
+    <Folder Include="SISWEB_OWNER\Synonyms" />
+    <Folder Include="SISWEB_OWNER_SHADOW\Synonyms" />
+    <Folder Include="sissearch2" />
+    <Folder Include="sissearch2\Tables" />
+    <Folder Include="sissearch2\Stored Procedures" />
+    <Folder Include="PIS\" />
+    <Folder Include="PIS\Tables\" />
+    <Build Include="PIS\Tables\WHS_PIP_PSP_PGM.sql" />
+    <Build Include="PIS\Tables\WHS_PIP_PSP_DESC.sql" />
+    <Build Include="Security\PIS.sql" />
+    <Build Include="sis\Tables\ServiceLetterCompletion.sql" />
+    <Build Include="sis\Stored Procedures\ServiceLetterCompletion_Merge.sql" />
+    <Build Include="sis_stage\Stored Procedures\ServiceLetterCompletion_Load.sql" />
+    <Build Include="sis_stage\Tables\ServiceLetterCompletion.sql" />
+    <Folder Include="admin\Synonyms\" />
+    <Folder Include="sis_stage\Synonyms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="sis\Tables\ClientApplicationAccess.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="PRODUCTSEARCH\Tables\LOG.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="PRODUCTSEARCH\Tables\PRODUCTFAMILY.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis\Views\vw_IEImageLocation.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis\Views\vw_SerialMeta.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Storage\FT_Chain.sql" />
+    <Build Include="FullTextIndexes.sql" />
+    <Build Include="Security\sisattunity.sql" />
+    <Build Include="Security\sisws.sql" />
+    <Build Include="Security\sisautomation.sql" />
+    <Build Include="Security\sissearchdatasource.sql" />
+    <Build Include="Security\empautomation.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\sis2etl.sql" />
+    <Build Include="PRODUCTSEARCH\Stored Procedures\PRODUCTFAMILY_LOAD.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Security\MasterKeys.sql" />
+    <Build Include="Security\https___azuremediationusc.blob.core.windows.net_sqldbauditlogs.sql" />
+    <Build Include="Security\https___azuremediationusc.blob.core.windows.net_sqldbtdlogs.sql" />
+    <Build Include="Security\https___azuremediationunc.blob.core.windows.net_sqldbauditlogs.sql" />
+    <Build Include="Security\https___azuremediationunc.blob.core.windows.net_sqldbtdlogs.sql" />
+    <Build Include="Security\PRODUCTSEARCH.sql" />
+    <Build Include="Security\sis.sql" />
+    <Build Include="Security\sis_shadow.sql" />
+    <Build Include="Security\SIS_SEARCH.sql" />
+    <Build Include="Security\SISSEARCH.sql" />
+    <Build Include="Security\SISWEB_OWNER.sql" />
+    <Build Include="Security\Permissions.sql" />
+    <Build Include="Security\SIS_REPORT.sql" />
+    <Build Include="sis_stage\Tables\AsShippedEngine.sql" />
+    <Build Include="sis_stage\Tables\AsShippedEngine_Key.sql" />
+    <Build Include="sis_stage\Tables\AsShippedPart.sql" />
+    <Build Include="sis_stage\Tables\AsShippedPart_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\AsShippedPart_Effectivity_Key.sql" />
+    <Build Include="sis_stage\Tables\AsShippedPart_Key.sql" />
+    <Build Include="sis_stage\Tables\CaptivePrime.sql" />
+    <Build Include="sis_stage\Tables\CCRGroupIE_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\CCRMedia.sql" />
+    <Build Include="sis_stage\Tables\CCROperations.sql" />
+    <Build Include="sis_stage\Tables\CCRRepairTypes.sql" />
+    <Build Include="sis_stage\Tables\CCRRepairTypes_Translation.sql" />
+    <Build Include="sis_stage\Tables\CCRSegments.sql" />
+    <Build Include="sis_stage\Tables\CCRTechdocSNP_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\CCRUpdatesIE_Relation.sql" />
+    <Build Include="sis_stage\Tables\CCRUpdateTypes.sql" />
+    <Build Include="sis_stage\Tables\CCRUpdateTypes_Translation.sql" />
+    <Build Include="sis_stage\Tables\CCRVirtualIE_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\RepairDescriptions.sql" />
+    <Build Include="sis_stage\Tables\RepairDescriptions_Translation.sql" />
+    <Build Include="sis_stage\Tables\CaptivePrime_Key.sql" />
+    <Build Include="sis_stage\Tables\ConfigurationInfo.sql" />
+    <Build Include="sis_stage\Tables\IEPart.sql" />
+    <Build Include="sis_stage\Tables\IELevel.sql" />
+    <Build Include="sis_stage\Tables\IELevel_Translation.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Illustration_Relation.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Illustration_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Key.sql" />
+    <Build Include="sis_stage\Tables\Illustration.sql" />
+    <Build Include="sis_stage\Tables\Illustration_File.sql" />
+    <Build Include="sis_stage\Tables\Illustration_File_Key.sql" />
+    <Build Include="sis_stage\Tables\Illustration_Key.sql" />
+    <Build Include="sis_stage\Tables\Language.sql" />
+    <Build Include="sis_stage\Tables\Language_Key.sql" />
+    <Build Include="sis_stage\Tables\Language_Details.sql" />
+    <Build Include="sis_stage\Tables\Log.sql" />
+    <Build Include="sis_stage\Tables\Media.sql" />
+    <Build Include="sis_stage\Tables\Media_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\Media_Key.sql" />
+    <Build Include="sis_stage\Tables\Media_Translation.sql" />
+    <Build Include="sis_stage\Tables\Part.sql" />
+    <Build Include="sis_stage\Tables\MediaSection.sql" />
+    <Build Include="sis_stage\Tables\MediaSection_Key.sql" />
+    <Build Include="sis_stage\Tables\MediaSection_Translation.sql" />
+    <Build Include="sis_stage\Tables\MediaSequence.sql" />
+    <Build Include="sis_stage\Tables\MediaSequence_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\MediaSequence_Key.sql" />
+    <Build Include="sis_stage\Tables\MediaSequence_Translation.sql">
+      <AnsiNulls>On</AnsiNulls>
+    </Build>
+    <Build Include="sis_stage\Tables\Part_AsShippedEngine_Relation.sql" />
+    <Build Include="sis_stage\Tables\Part_AsShippedEngine_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\Part_AsShippedPart_Relation.sql" />
+    <Build Include="sis_stage\Tables\Part_AsShippedPart_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\Part_IEPart_Relation.sql" />
+    <Build Include="sis_stage\Tables\Part_IEPart_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\Part_IEPart_Relation_Translation.sql" />
+    <Build Include="sis_stage\Tables\Part_Key.sql" />
+    <Build Include="sis_stage\Tables\Part_Translation.sql" />
+    <Build Include="sis_stage\Tables\ProductFamily.sql" />
+    <Build Include="sis_stage\Tables\ProductFamily_Key.sql" />
+    <Build Include="sis_stage\Tables\ProductFamily_Translation.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_IEPart_Relation.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_IEPart_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_Translation.sql" />
+    <Build Include="sis_stage\Tables\ProductSubfamily.sql" />
+    <Build Include="sis_stage\Tables\ProductSubfamily_Key.sql" />
+    <Build Include="sis_stage\Tables\ProductSubfamily_Translation.sql" />
+    <Build Include="sis_stage\Tables\Product_Relation.sql" />
+    <Build Include="sis_stage\Tables\Related_Part_Relation.sql" />
+    <Build Include="sis_stage\Tables\Related_Part_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\SalesModel.sql" />
+    <Build Include="sis_stage\Tables\SalesModel_Key.sql" />
+    <Build Include="sis_stage\Tables\SerializedComponent_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\SerializedComponent_Effectivity_Key.sql" />
+    <Build Include="sis_stage\Tables\SerialNumberPrefix.sql" />
+    <Build Include="sis_stage\Tables\SerialNumberPrefix_Key.sql" />
+    <Build Include="sis_stage\Tables\SerialNumberRange.sql" />
+    <Build Include="sis_stage\Tables\SerialNumberRange_Key.sql" />
+    <Build Include="sis_stage\Tables\SupersessionChain.sql" />
+    <Build Include="sis_stage\Tables\SupersessionChain_Key.sql" />
+    <Build Include="sis_stage\Tables\SupersessionChain_Part_Relation.sql" />
+    <Build Include="sis_stage\Tables\Supersession_Part_Relation.sql" />
+    <Build Include="sis_stage\Tables\Supersession_Part_Relation_Key.sql" />
+    <Build Include="sis_stage\Tables\ServiceSoftware_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\ServiceSoftware_Effectivity_Suffix.sql" />
+    <Build Include="sis_stage\Tables\AsShippedPart_Level_Relation.sql" />
+    <Build Include="sis_stage\Tables\CIDCodeDetails.sql" />
+    <Build Include="sis_stage\Tables\FMICodeDetails.sql" />
+    <Build Include="sis_stage\Tables\MIDCodeDetails.sql" />
+    <Build Include="sis_stage\Tables\TroubleshootingConfigurationInfo.sql" />
+    <Build Include="sis_stage\Tables\TroubleshootingConfigurationInfoIERelation.sql" />    
+    <Build Include="sis_stage\Tables\TroubleshootingIllustrationDetails.sql" />
+    <Build Include="sis_stage\Tables\TroubleshootingInfo.sql" />
+    <Build Include="sis_stage\Tables\TroubleshootingInfo2.sql" />
+    <Build Include="sis_stage\Tables\TroubleshootingInfoIERelation.sql" />
+    <Build Include="sis_shadow\Synonyms\MediaSequence.sql" />
+    <Build Include="sis_shadow\Tables\MediaSequence_Base.sql" />
+    <Build Include="sis\Tables\AsShippedEngine.sql" />
+    <Build Include="sis\Tables\AsShippedPart.sql" />
+    <Build Include="sis\Tables\AsShippedPart_Effectivity.sql" />
+    <Build Include="sis\Tables\CaptivePrime.sql" />
+    <Build Include="sis\Tables\CCRGroupIE_Effectivity.sql" />
+    <Build Include="sis\Tables\CCRMedia.sql" />
+    <Build Include="sis\Tables\CCROperations.sql" />
+    <Build Include="sis\Tables\CCRRepairTypes.sql" />
+    <Build Include="sis\Tables\CCRRepairTypes_Translation.sql" />
+    <Build Include="sis\Tables\CCRSegments.sql" />
+    <Build Include="sis\Tables\CCRUpdatesIE_Relation.sql" />
+    <Build Include="sis\Tables\CCRUpdateTypes.sql" />
+    <Build Include="sis\Tables\CCRUpdateTypes_Translation.sql" />
+    <Build Include="sis\Tables\CCRTechdocSNP_Effectivity.sql" />
+    <Build Include="sis\Tables\CCRVirtualIE_Effectivity.sql" />
+    <Build Include="sis\Tables\RepairDescriptions.sql" />
+    <Build Include="sis\Tables\RepairDescriptions_Translation.sql" />
+    <Build Include="sis\Tables\Chain_Temp.sql" />
+    <Build Include="sis\Tables\CCRPartsProductStructure.sql" />
+    <Build Include="sis\Tables\ConfigurationInfo.sql" />  
+    <Build Include="sis\Tables\IELevel.sql" />  
+    <Build Include="sis\Tables\IELevel_Translation.sql" />  
+    <Build Include="sis\Tables\IEPart.sql" />
+    <Build Include="sis\Tables\IEPart_Effectivity.sql" />
+    <Build Include="sis\Tables\IEPart_Illustration_Relation.sql" />
+    <Build Include="sis\Tables\Illustration.sql" />
+    <Build Include="sis\Tables\Illustration_File.sql" />
+    <Build Include="sis\Tables\IIB_Language.sql" />
+    <Build Include="sis\Tables\Language.sql" />
+    <Build Include="sis\Tables\Language_Details.sql" />
+    <Build Include="sis\Tables\Log.sql" />
+    <Build Include="sis\Tables\Media.sql" />
+    <Build Include="sis\Tables\Media_Effectivity.sql" />
+    <Build Include="sis\Tables\Media_Translation.sql" />
+    <Build Include="sis\Tables\Part.sql" />
+    <Build Include="sis\Tables\MediaSection.sql" />
+    <Build Include="sis\Tables\MediaSection_Translation.sql" />
+    <Build Include="sis\Tables\MediaSequenceSectionFamily.sql" />    
+    <Build Include="sis\Tables\MediaSequence_Base.sql" />
+    <Build Include="sis\Tables\MediaSequenceFamily.sql" />
+    <Build Include="sis\Tables\MediaSequence_Effectivity.sql" />
+    <Build Include="sis\Tables\MediaSequence_Translation.sql" />
+    <Build Include="sis\Tables\Part_AsShippedEngine_Relation.sql" />
+    <Build Include="sis\Tables\Part_AsShippedPart_Relation.sql" />
+    <Build Include="sis\Tables\Part_IEPart_Relation.sql" />
+    <Build Include="sis\Tables\Part_IEPart_Relation_Translation.sql" />
+    <Build Include="sis\Tables\Part_Translation.sql" />
+    <Build Include="sis\Tables\ProductFamily.sql" />
+    <Build Include="sis\Tables\ProductFamily_Translation.sql" />
+    <Build Include="sis\Tables\ProductStructure.sql" />
+    <Build Include="sis\Tables\ProductStructure_IEPart.sql" />
+    <Build Include="sis\Tables\ProductStructure_IEPart_Relation.sql" />
+    <Build Include="sis\Tables\ProductStructure_Translation.sql" />
+    <Build Include="sis\Tables\ProductSubfamily.sql" />
+    <Build Include="sis\Tables\ProductSubfamily_Translation.sql" />
+    <Build Include="sis\Tables\Product_Relation.sql" />
+    <Build Include="sis\Tables\Related_Part_Relation.sql" />
+    <Build Include="sis\Tables\SalesModel.sql" />
+    <Build Include="sis\Tables\SerializedComponent_Effectivity.sql" />
+    <Build Include="sis\Tables\SerialNumberPrefix.sql" />
+    <Build Include="sis\Tables\SerialNumberRange.sql" />
+    <Build Include="sis\Tables\SupersessionChain.sql" />
+    <Build Include="sis\Tables\SupersessionChain_Part_Relation.sql" />
+    <Build Include="sis\Tables\Supersession_Part_Relation.sql" />
+    <Build Include="sis\Tables\ServiceSoftware_Effectivity.sql" />
+    <Build Include="sis\Tables\ServiceSoftware_Effectivity_Suffix.sql" />
+    <Build Include="sis\Tables\ServiceFile_DisplayTerms.sql" />
+    <Build Include="sis\Tables\ServiceFile_DisplayTerms_Translation.sql" />
+    <Build Include="sis\Tables\ServiceFile.sql" />
+    <Build Include="sis\Tables\ServiceFile_CPI.sql" />
+    <Build Include="sis\Tables\ServiceFile_Reference.sql" />
+    <Build Include="sis\Tables\ServiceFile_ReplacementHierarchy.sql" />
+    <Build Include="sis\Tables\ServiceFile_SearchCriteria.sql" />
+    <Build Include="sis\Tables\TelematicsECMIDs.sql" />
+    <Build Include="sis\Tables\FlashApplication.sql" />
+    <Build Include="sis\Tables\FlashApplication_Translation.sql" />
+    <Build Include="sis\Tables\CIDCodeDetails.sql" />
+    <Build Include="sis\Tables\FMICodeDetails.sql" />
+    <Build Include="sis\Tables\MIDCodeDetails.sql" />
+    <Build Include="sis\Tables\TroubleshootingConfigurationInfo.sql" />
+    <Build Include="sis\Tables\TroubleshootingConfigurationInfoIERelation.sql" />       
+    <Build Include="sis\Tables\TroubleshootingIllustrationDetails.sql" />
+    <Build Include="sis\Tables\TroubleshootingInfo.sql" />
+    <Build Include="sis\Tables\TroubleshootingInfo2.sql" />
+    <Build Include="sis\Tables\TroubleshootingInfoIERelation.sql" />    
+    <Build Include="sis\Tables\AsShippedPart_Level_Relation.sql" />
+    <Build Include="sis\Stored Procedures\CDS_data_Merge.sql" />
+    <Build Include="sis\Stored Procedures\AsShippedEngine_Merge.sql" />
+    <Build Include="sis\Stored Procedures\AsShippedPart_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\AsShippedPart_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CaptivePrime_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRMedia_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRSegments_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCROperations_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRUpdateTypes_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRUpdateTypes_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRGroupIE_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRTechdocSNP_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRVirtualIE_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRUpdatesIE_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRVirtualIE_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRRepairTypes_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRRepairTypes_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\RepairDescriptions_Merge.sql" />
+    <Build Include="sis\Stored Procedures\RepairDescriptions_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Hard_Delete.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_Illustration_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IELevel_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IELevel_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Illustration_File_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Illustration_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Language_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Language_Details_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Media_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Media_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Media_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_AsShippedEngine_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_AsShippedPart_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_IEPart_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_IEPart_Relation_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Part_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\PartsWithRelatedParts_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_SNP_TopLevel_Load.sql" />
+    <Build Include="sis\Stored Procedures\ProductFamily_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductFamily_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_IEPart_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_IEPart_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductSubfamily_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductSubfamily_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Product_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Related_Part_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SalesModel_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SerializedComponent_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SerialNumberPrefix_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SerialNumberRange_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_CPI_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_DisplayTerms_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_DisplayTerms_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_SearchCriteria_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_Reference_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceFile_ReplacementHierarchy_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceSoftware_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ServiceSoftware_Effectivity_Suffix_Merge.sql" />
+    <Build Include="sis\Stored Procedures\FlashApplication_Merge.sql" /> 
+    <Build Include="sis\Stored Procedures\SP_GuidedTroubleshooting_PartNumberDescription.sql" />     
+    <Build Include="sis\Stored Procedures\SupersessionChain_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SupersessionChain_Part_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Supersession_Part_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\CCRPartsProductStrucature_Merge.sql" />
+    <Build Include="sis\Stored Procedures\NprInfo_Merge.sql" />
+    <Build Include="sis\Stored Procedures\NprInfoRecType23_Merge.sql" />
+    <Build Include="sis\Stored Procedures\NprInfoRecType456_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Truncate_All.sql" />
+    <Build Include="sis\Stored Procedures\AsShippedPart_Level_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Swap_ForeignKeys.sql" />
+    <Build Include="sis\Stored Procedures\Swap_ForeignKeys_Parent.sql" />
+    <Build Include="sis\Stored Procedures\Swap_Synonym.sql" />
+    <Build Include="sis\Stored Procedures\SP_IE_EFFECTIVITY_SNP.sql" /> 
+    <Build Include="sis\Stored Procedures\SP_Part_PartName_Translation.sql" /> 
+    <Build Include="sis\Stored Procedures\SP_Part_Alternate_Part_Relation.sql" />         
+    <Build Include="SIS_REPORT\Tables\RestrictedParts.sql" />
+    <Build Include="dbo\Functions\RemoveNonAlphaNumericCharacters.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_DDLPrep.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_EngineSourePrep.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_MachineSource2Prep.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_MachineSource3Prep.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\AsShipped_MachineSourcePrep.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\CaptivePrime_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P1.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P2.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P3.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P4.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P5.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P6.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\IEPart_Effectivity_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\IEPart_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Illustration_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Language_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Language_Details_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Media_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Part_IEPart_Relation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Part_IEPart_Relation_Translation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Part_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Part_Translation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Product_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_IEPart_Relation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_Translation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Related_Part_Relation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\SerialNumberRange_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\Supersession_Part_Relation_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\SupersessionChain_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="sis_stage\Stored Procedures\CDS_data_Load.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISSEARCH\Tables\LOG.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISSEARCH\Tables\REF_EXCLUDEINFOTYPE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISSEARCH\Stored Procedures\LNKMEDIAIEPART_LASTMODIFIEDDATE_LOAD.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKASSHIPPEDPRODUCT.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKASSHIPPEDPRODUCTDETAILS.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKASSHIPPEDPRODUCTDETAILS2.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKASSHIPPEDPRODUCTDETAILS3.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKCAPTIVETOPRIME.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKCONSISTLIST_BASE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIEDATE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIEIMAGE_BASE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIEINFOTYPE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIEPSID_BASE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIESMCS.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIESNP.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKIETITLE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAARRANGEMENT.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKKITIEMEDIA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAIE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAIEPART_BASE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAINFOTYPE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIASECTION.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIASNP.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKPARTINFORMATION.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKPARTSIESNP_BASE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKPRODUCT.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKRELATEDPARTINFO.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKSERIALPART.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKTRANSLATEDSPN.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASEPSTESTCELLDATA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASIMAGELOCATION.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASINFOTYPE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASLANGUAGE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASMEDIA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASPRODUCT.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASPRODUCTSTRUCTURE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASSMCS.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASSMCS_Original.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASSNP.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MV_KITBOM.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MV_KITDATA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\SUPERSESSIONCHAINS.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKFILEDISPLAYTERMS.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKFILEREFERENCE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKFILEREPLACEMENTHIERARCHY.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKFILESEARCHCRITERIA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKFLASHAPPLICATIONCODE.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\MASFILEPROPERTIES.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Security\sis_stage.sql" />
+    <Build Include="sis\Views\vw_MediaSequenceFamily.sql" />
+    <Build Include="sis\Views\vw_ProductStructure_IEPart.sql" />
+    <Build Include="sis\Views\vw_AsShippedPart1.sql" />
+    <Build Include="sis\Views\vw_AsShippedPart2.sql" />
+    <Build Include="sis\Views\vw_AsShippedPart3.sql" />
+    <Build Include="sis\Views\vw_AsShippedPart.sql" />
+    <Build Include="sis\Views\vw_IEPart_IE_Illustration.sql" />
+    <Build Include="Security\SIS_AUTHORING.sql" />
+    <Build Include="sis\Tables\ServiceLetter_Type_Codes.sql" />
+    <Build Include="SIS_AUTHORING\Tables\MKT_ORG_MAP.sql" />
+    <Build Include="sis\Views\ServiceLetter_RestrictionCodes.sql" />
+    <Build Include="SISSEARCH\Tables\MEDIARESTRICTACCESS_2.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAEFFECTIVITY.sql" />
+    <Build Include="SISSEARCH\Tables\BASICPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\BASICSERVICEIE_2.sql" />
+    <Build Include="SISSEARCH\Tables\BASICSERVICEMEDIA_2.sql" />
+    <Build Include="SISSEARCH\Tables\CONSISTPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\MEDIAINFOTYPE_2.sql" />
+    <Build Include="SISSEARCH\Tables\MEDIAPRODUCTFAMILY_2.sql" />
+    <Build Include="SISSEARCH\Tables\PRODUCTSTRUCTURE_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIEMEDIA_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIEPRODUCTFAMILY_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIEPRODUCTSTRUCTURE_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIERESTRICTACCESS_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIESMCS_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIETEXT_2.sql" />
+    <Build Include="SISSEARCH\Tables\SMCS_2.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\BASICPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\BASICSERVICEIE_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\BASICSERVICEMEDIA_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\CONSISTPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\MEDIAINFOTYPE_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\MEDIAPRODUCTFAMILY_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\MEDIARESTRICTACCESS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\PRODUCTSTRUCTURE_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIEMEDIA_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIEPRODUCTFAMILY_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIEPRODUCTSTRUCTURE_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIERESTRICTACCESS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIESMCS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SMCS_2_FULL_RELOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SMCS_2_LOAD.sql" />
+    <PostDeploy Include="Deploy Scripts\PostDeploy.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKIEEFFECTIVITY.sql" />
+    <Build Include="SISWEB_OWNER\Tables\PART_TRANSLATION.sql" />
+    <Build Include="SISWEB_OWNER\Tables\PART_SUPERSESSIONCHAIN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PART_TRANSLATION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PART_SUPERSESSIONCHAIN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKKITIEMEDIA.sql" />
+    <Build Include="sis\Views\vw_MediaSection.sql" />
+    <Build Include="sis\Views\vw_MediaSeq.sql" />
+    <Build Include="sis\Views\vw_MediaAsshipped.sql" />
+    <Build Include="sis\Views\vw_RelatedPartsNoKits.sql" />
+    <Build Include="sis\Views\vw_RelatedPartsNoKits_2.sql" />
+    <Build Include="sis\Views\vw_IEPart_SNP_TopLevel.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKSERIALARRANGEMENT.sql" />
+    <Build Include="sis\Views\vw_Product.sql" />
+    <Build Include="sis\Views\vw_MediaAsshippedAndRelatedParts.sql" />
+    <Build Include="sis\Views\vw_MediaAsshipped_v1.sql" />
+    <Build Include="sis\Views\vw_MediaAsshippedAndRelatedParts_v1.sql" />
+    <Build Include="sis_stage\Sequences\SequenceLnkAsShippedConsistID.sql" />
+    <Build Include="sis_stage\Sequences\ServiceFileSeq.sql" />
+    <Build Include="SISSEARCH\Tables\KITCONSISTPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\KITIEPART_2.sql" />
+    <Build Include="SISSEARCH\Tables\REMANCONSISTPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\REMANIEPART_2.sql" />
+    <Build Include="SISSEARCH\Tables\YELLOWMARKCONSISTPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\YELLOWMARKIEPART_2.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\KITCONSISTPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\KITIEPART_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\REMANCONSISTPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\REMANIEPART_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\YELLOWMARKCONSISTPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\YELLOWMARKIEPART_2_LOAD.sql" />
+    <Build Include="sis\Views\vw_LNKIEINFOTYPE_Active.sql" />
+    <Build Include="sis\Views\vw.LNKMEDIAINFOTYPE_Active.sql" />
+    <Build Include="sis\Views\vw_LNKMEDIASNP_Active.sql" />
+    <Build Include="SISSEARCH\Tables\PRODUCTHIERARCHY_2.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\PRODUCTHIERARCHY_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Tables\MEDIAPRODUCTHIERARCHY_2.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIEPRODUCTHIERARCHY_2.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\MEDIAPRODUCTHIERARCHY_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIEPRODUCTHIERARCHY_2_LOAD.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2IEEFFECTIVITY.sql" />
+    <Build Include="Security\SOC.sql" />
+    <Build Include="SOC\Tables\Media.sql" />
+    <Build Include="SOC\Tables\Smcs.sql" />
+    <Build Include="SOC\Tables\Media_Smcs.sql" />
+    <Build Include="SOC\Tables\smcsWorkApplicationCode.sql" />
+    <Build Include="SOC\Tables\smcsQuantityCode.sql" />
+    <Build Include="SOC\Tables\smcsModifierCode.sql" />
+    <Build Include="SOC\Tables\smcsJobLocationCode.sql" />
+    <Build Include="SOC\Tables\smcsJobConditionCode.sql" />
+    <Build Include="SOC\Tables\smcsJobCode.sql" />
+    <Build Include="SOC\Tables\smcsComponentCode.sql" />
+    <Build Include="SOC\Tables\smcsCabTypeCode.sql" />
+    <Build Include="SOC\Tables\SerialNumberRange.sql" />
+    <Build Include="SOC\Tables\SerialNumberPrefix.sql" />
+    <Build Include="SOC\Tables\Media_Translation.sql" />
+    <Build Include="SOC\Tables\Media_Effectivity.sql" />
+    <Build Include="sis\Synonyms\MediaSequence.sql" />
+    <Build Include="sis\Tables\IE.sql" />
+    <Build Include="sis\Tables\InfoType.sql" />
+    <Build Include="sis\Tables\SMCS.sql" />
+    <Build Include="sis\Tables\SMCS_Translation.sql" />
+    <Build Include="sis\Tables\SMCS_IE_Relation.sql" />
+    <Build Include="sis\Tables\ProductStructure_IE_Relation.sql" />
+    <Build Include="sis\Tables\Media_InfoType_Relation.sql" />
+    <Build Include="sis\Tables\IE_Translation.sql" />
+    <Build Include="sis\Tables\IE_ProductFamily_Effectivity.sql" />
+    <Build Include="sis\Tables\IE_Illustration_Relation.sql" />
+    <Build Include="sis\Tables\IE_Effectivity.sql" />
+    <Build Include="sis\Tables\InfoType_Translation.sql" />
+    <Build Include="sis\Tables\Dealer.sql" />
+    <Build Include="sis\Tables\IE_Dealer_Relation.sql" />
+    <Build Include="sis\Tables\IE_MarketingOrg_Relation.sql" />
+    <Build Include="sis\Tables\MarketingOrg.sql" />
+    <Build Include="sis_stage\Tables\SMCS.sql" />
+    <Build Include="sis_stage\Tables\SMCS_Diff.sql" />
+    <Build Include="sis_stage\Stored Procedures\SMCS_Load.sql" />
+    <Build Include="sis_stage\Tables\SMCS_Key.sql" />
+    <Build Include="sis_stage\Tables\SMCS_Translation.sql" />
+    <Build Include="sis_stage\Tables\SMCS_Translation_Diff.sql" />
+    <Build Include="sis\Stored Procedures\SMCS_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\SP_AsShippedEngine.sql" />
+    <Build Include="sis\Stored Procedures\SP_IEPL_EMP.sql" />
+    <Build Include="sis\Stored Procedures\SP_IEPL_Non_EMP.sql" />
+    <Build Include="sis\Stored Procedures\SP_IEPL_PartWhereUsed_EMP.sql" />
+    <Build Include="sis\Stored Procedures\SP_MediaAsShipped.sql" />
+    <Build Include="sis\Stored Procedures\SP_MediaAsShippedAndRelatedParts.sql" />
+    <Build Include="sis\Stored Procedures\SP_MediaSeqFamily_IESCN.sql" />
+    <Build Include="sis\Stored Procedures\SMCS_Merge.sql" />
+    <Build Include="sis_stage\Tables\InfoType_Key.sql" />
+    <Build Include="sis_stage\Tables\InfoType.sql" />
+    <Build Include="sis_stage\Stored Procedures\InfoType_Load.sql" />
+    <Build Include="sis_stage\Tables\InfoType_Translation_Diff.sql" />
+    <Build Include="sis_stage\Tables\InfoType_Translation.sql" />
+    <Build Include="sis\Stored Procedures\InfoType_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\InfoType_Merge.sql" />
+    <Build Include="sis_stage\Stored Procedures\IE_Load.sql" />
+    <Build Include="SISSEARCH\Tables\SERVICEIESNP_4.sql" />
+    <Build Include="SISSEARCH\Tables\MEDIASNP_4.sql" />
+    <Build Include="SISSEARCH\Tables\SNP_4.sql" />
+    <Build Include="SISSEARCH\Tables\EXPANDEDMININGPRODUCTPARTS.sql" />
+    <Build Include="SISSEARCH\Tables\EXPANDEDMININGPRODUCTPARTS_2.sql" />
+    <Build Include="SISSEARCH\Tables\CONSOLIDATEDMEDIA_4.sql" />
+    <Build Include="SISSEARCH\Tables\CONSOLIDATEDPARTS_4.sql" />
+    <Build Include="SISSEARCH\Tables\CONSOLIDATEDPARTS_5.sql" />
+    <Build Include="SISSEARCH\Tables\CONSOLIDATEDSERVICEIE_4.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SERVICEIESNP_4_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\MEDIASNP_4_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SNP_4_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SNP_4_FULL_RELOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\EXPANDEDMININGPRODUCTPARTS_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\EXPANDEDMININGPRODUCTPARTS_2_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\CONSOLIDATEDMEDIA_4_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\CONSOLIDATEDPARTS_4_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\CONSOLIDATEDPARTS_5_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\CONSOLIDATEDSERVICEIE_4_LOAD.sql" />
+    <Build Include="sis_stage\Tables\Media_InfoType_Relation.sql" />
+    <Build Include="sis_stage\Tables\IE_Key.sql" />
+    <Build Include="sis_stage\Tables\IE_InfoType_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE_InfoType_Relation.sql" />
+    <Build Include="sis_stage\Tables\IE_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\IE_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE.sql" />
+    <Build Include="sis\Tables\IE_InfoType_Relation.sql" />
+    <Build Include="sis_stage\Stored Procedures\Media_InfoType_Relation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\IE_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\IE_InfoType_Relation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\IE_Effectivity_Load.sql" />
+    <Build Include="sis\Stored Procedures\Media_InfoType_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IE_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IE_Effectivity_Merge.sql" />
+    <Build Include="sis_stage\Tables\MarketingOrg_Key.sql" />
+    <Build Include="sis_stage\Tables\MarketingOrg_Diff.sql" />
+    <Build Include="sis_stage\Tables\MarketingOrg.sql" />
+    <Build Include="sis_stage\Tables\IE_MarketingOrg_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE_MarketingOrg_Relation.sql" />
+    <Build Include="sis_stage\Tables\IE_Dealer_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE_Dealer_Relation.sql" />
+    <Build Include="sis_stage\Tables\Dealer_Key.sql" />
+    <Build Include="sis_stage\Tables\Dealer_Diff.sql" />
+    <Build Include="sis_stage\Tables\Dealer.sql" />
+    <Build Include="sis_stage\Stored Procedures\MarketingOrg_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\Dealer_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRMedia_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRSegments_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCROperations_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRUpdateTypes_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRUpdateTypes_Translation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRGroupIE_Effectivity_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRTechdocSNP_Effectivity_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRVirtualIE_Effectivity_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRUpdatesIE_Relation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRRepairTypes_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\CCRRepairTypes_Translation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\RepairDescriptions_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\RepairDescriptions_Translation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\IELevel_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\IELevel_Translation_Load.sql" />
+    <Build Include="sis\Stored Procedures\MarketingOrg_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IE_MarketingOrg_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IE_Dealer_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Dealer_Merge.sql" />
+    <Build Include="sis_stage\Tables\IE_Translation_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE_Translation.sql" />
+    <Build Include="sis\Stored Procedures\IE_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequence_Merge.sql" />
+    <Build Include="sis_stage\Tables\IE_ProductFamily_Effectivity.sql" />
+    <Build Include="sis_stage\Stored Procedures\IE_ProductFamily_Effectivity_Load.sql" />
+    <Build Include="sis\Stored Procedures\IE_ProductFamily_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSection_Merge.sql" />
+    <Build Include="sis_stage\Tables\IE_Illustration_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\IE_Illustration_Relation.sql" />
+    <Build Include="sis\Stored Procedures\IE_Illustration_Relation_Merge.sql" />
+    <Build Include="sis_stage\Tables\SMCS_IE_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\SMCS_IE_Relation.sql" />
+    <Build Include="sis\Stored Procedures\SMCS_IE_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequenceFamily_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequenceSectionFamily_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequence_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSection_Translation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequence_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\IE_InfoType_Relation_Merge.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_IE_Relation_Diff.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_IE_Relation.sql" />
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_IE_Relation_Load.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_IE_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\MediaSequence_Refresh_shadow_Table.sql" />
+    <Build Include="SOC\Tables\ComponentCodeCategories.sql" />
+    <Build Include="sis\Types\PARTNAMES.sql" />
+    <Build Include="sis\Functions\tvf_ProductStructureDescriptions.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedIETitles.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedSmcsDescriptions.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedSmcsDescriptions_v2.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedInfoTypes.sql" />
+    <Build Include="sis\Functions\tvf_InjectorFileIds.sql" />
+    <Build Include="sis\Functions\tvf_TempTableSerialNumberFilteration.sql" />
+    <Build Include="sis\Functions\fn_get_table_from_synonym.sql" />
+    <Build Include="sis\Stored Procedures\html_QueryToHtmlTable.sql" />
+    <Build Include="sis\Stored Procedures\html_getLatestLogErrors.sql" />
+    <Build Include="sis\Tables\Media_ProductFamily_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\Media_ProductFamily_Effectivity.sql" />
+    <Build Include="sis_stage\Stored Procedures\Media_ProductFamily_Effectivity_Load.sql" />
+    <Build Include="sis\Stored Procedures\Media_ProductFamily_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\ProductStructure_Effectivity_Merge.sql" />
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_Effectivity_Load.sql" />
+    <Build Include="sis\Tables\ProductStructure_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\ProductStructure_Effectivity.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms_Translation.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_CPI.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_Reference.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_ReplacementHierarchy.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_SearchCriteria.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms_Translation_Diff.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms_Key.sql" />
+    <Build Include="sis_stage\Tables\FlashApplication.sql" />
+    <Build Include="sis_stage\Tables\FlashApplication_Translation.sql" />
+    <Build Include="Security\SISWEB_OWNER_STAGING.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SUPERSESSIONCHAINS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2NPRPARTHISTORY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MV_KITDATA.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MV_KITBOM.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASSNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASSMCS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASPRODUCTSTRUCTURE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASPRODUCT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASINFOTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKTRANSLATEDSPN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSERIALPART.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSERIALARRANGEMENT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKPRODUCT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEPSID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCAPTIVETOPRIME.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\_getFullOrDiffWithEMP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\_getFullOrDiffEMP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKPRODUCT_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEPSID_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCAPTIVETOPRIME_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKSERIALARRANGEMENT_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKSERIALPART_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKTRANSLATEDSPN_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASINFOTYPE_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASFILEPROPERTIES_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKFILEDISPLAYTERMS_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKFILEREFERENCE_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKFLASHAPPLICATIONCODE_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKFILESEARCHCRITERIA_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKFILEREPLACEMENTHIERARCHY_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASCCRMEDIA_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASCCROPERATIONS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASCCRREPAIRTYPES_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASCCRSEGMENTS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASCCRUPDATETYPES_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASPRODUCT_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASPRODUCTSTRUCTURE_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASREPAIRDESCRIPTIONS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASSMCS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SUPERSESSIONCHAINS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MV_KITDATA_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MV_KITBOM_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASSNP_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKATTACHMENTDESCRIPTION_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCONFIGURATIONTYPE_Merge.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2NPRPARTHISTORY.sql" />
+    <Build Include="sis_stage\Stored Procedures\ProductStructure_Effectivity_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\Media_ProductFamily_Effectivity_Load.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2IEBLOBLOCATION.sql" />
+    <Build Include="sis\Tables\As_Shipped_Relation.sql" />
+    <Build Include="sis\Stored Procedures\WriteLog.sql" />
+    <Build Include="sis_stage\Stored Procedures\WriteLog.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEEFFECTIVITY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASIMAGELOCATION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIASNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEDATE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2IEEFFECTIVITY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2MEDIAEFFECTIVITY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAINFOTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASMEDIA.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKASSHIPPEDPRODUCTDETAILS3.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKASSHIPPEDPRODUCTDETAILS2.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIASECTION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCONSISTLIST.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\_LAST_SYNCHRONIZATION_VERSIONS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIESNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIESMCS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIETITLE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAARRANGEMENT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEIMAGE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAEFFECTIVITY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAIE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKPARTSIESNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKASSHIPPEDPRODUCTDETAILS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEINFOTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIELEVEL.sql" />    
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKRELATEDPARTINFO.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\_getFullOrDiff.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\_setLastSynchVersion.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKASSHIPPEDPRODUCTDETAILS_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKASSHIPPEDPRODUCTDETAILS2_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKASSHIPPEDPRODUCTDETAILS3_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCCRGROUPIESCN_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCCRVIRTUALIESCN_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCCRTECHDOCSNP_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCCRUPDATEPARTS_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCCRUPDATES_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCONSISTLIST_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEDATE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEEFFECTIVITY_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEIMAGE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEINFOTYPE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIESMCS_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIESNP_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIETITLE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAARRANGEMENT_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAEFFECTIVITY_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAIE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAIEPART_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAINFOTYPE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIASECTION_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIASNP_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKPARTSIESNP_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKRELATEDPARTINFO_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASIMAGELOCATION_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASMEDIA_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2IEEFFECTIVITY_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2MEDIAEFFECTIVITY_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2NPRPARTHISTORY_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\VALIDATE_PERSIST_PERCENT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Functions\_getLastSynchVersion.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Functions\_getDefaultORGCODE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Functions\_getDefaultORGCODESeparator.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Functions\_getOrgCodeBySeparator.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Functions\_getPartNumberBySeparator.sql" />
+    <None Include="Deploy Scripts\Lookup Tables\SISWEB_OWNER_STAGING._LAST_SYNCHRONIZATION_VERSIONS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKASSHIPPEDPRODUCT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASEPSTESTCELLDATA.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2ASSHIPPEDENGINE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2GRAPHICLOCATION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2IEBLOBLOCATION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFILEDISPLAYTERMS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFILECPI.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFILEREFERENCE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFILEREPLACEMENTHIERARCHY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFILESEARCHCRITERIA.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKFLASHAPPLICATIONCODE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASFILEPROPERTIES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\UPDATEDSERIALNUMBER.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\AUTHORINGPARTNAMES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKMEDIAIEMICROFICHE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKPSIDXREF.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSAFETY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSNPDETAILS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSNPXREF.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKASSHIPPEDPRODUCT_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\MASEPSTESTCELLDATA_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2ASSHIPPEDENGINE_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2GRAPHICLOCATION_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\SIS2IEBLOBLOCATION_Insert_Update_Delete.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2ASSHIPPEDENGINE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2GRAPHICLOCATION.sql" />
+    <Build Include="SISWEB_OWNER\Tables\SIS2MEDIAEFFECTIVITY.sql" />
+    <Build Include="Security\KIM.sql" />
+    <Build Include="Security\CDS.sql" />
+    <Build Include="KIM\Tables\SIS_KitParentParts.sql" />
+    <Build Include="KIM\Tables\SIS_KitNumbers.sql" />
+    <Build Include="KIM\Tables\SIS_KitBillOfMaterials.sql" />
+    <Build Include="KIM\Tables\SIS_KitSalesMarketingInfo.sql" />
+    <Build Include="KIM\Tables\SIS_CAL.sql" />
+    <Build Include="Security\sisadf.sql" />
+    <Build Include="Security\sisadf_1.sql" />
+    <Build Include="admin\Tables\User_AccessProfile_Relation.sql" />
+    <Build Include="admin\Tables\User_Group_Relation.sql" />
+    <Build Include="admin\Tables\AccessProfile_Permission_Relation.sql" />
+    <Build Include="admin\Tables\AccessProfile.sql" />
+    <Build Include="admin\Tables\Permission.sql" />
+    <Build Include="admin\Tables\ApplicationFeature.sql" />
+    <Build Include="admin\Tables\User_Contact.sql" />
+    <Build Include="admin\Tables\User_Details.sql" />
+    <Build Include="admin\Tables\Organization.sql" />
+    <Build Include="admin\Tables\Organization_Cleanup_Audit.sql" />
+    <Build Include="admin\Tables\Group_Details.sql" />
+    <Build Include="admin\Synonyms\User.sql" />
+    <Build Include="admin\Synonyms\Group.sql" />
+    <Build Include="Security\admin.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedIETitles_v2.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedInfoTypes_v2.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedProductStructure_v2.sql" />
+    <Build Include="SISSEARCH\Functions\tvf_CONSISTPARTS.sql" />
+    <Build Include="SISSEARCH\Functions\tvf_CONSISTPARTSORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_GetOperationTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\fn_replace_special_characters.sql" />    
+    <Build Include="SISSEARCH\Functions\fn_compare_source_target_columns.sql" />        
+    <Build Include="SISSEARCH\Views\vw_TRANSLATEDPARTS.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SetOperationTimeStamp.sql" />
+    <None Include="Deploy Scripts\Lookup Tables\Truncate InfoType and related tables.sql" />
+    <Build Include="admin\Tables\Affiliation.sql" />
+    <Build Include="admin\Tables\Affiliation_Profile_Relation.sql" />
+    <None Include="Deploy Scripts\Lookup Tables\Backup admin.User.sql" />
+    <None Include="Deploy Scripts\Lookup Tables\Restore admin.User.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKCONSISTLIST.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKCONSISTLIST_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\EMPPRODUCTFAMILY.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\EMPPRODUCTFAMILY_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\EMPPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\EMPPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\EMPSALESMODEL.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\EMPSALESMODEL_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\PARTSPDF.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\PARTSPDF_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKPARTSPDFPSID.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKPARTSPDFPSID_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKPDFPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKPDFPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKIEPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKIEPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\PARTSPDF.sql" />
+    <Build Include="Security\SISWEB_OWNER_SWAP.sql" />
+    <Build Include="Security\SISWEB_OWNER_SHADOW.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKMEDIAIEPART_BASE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAIEPART_SNP_TOPLEVEL_repopulate.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKEMPPRODUCTINSTANCE_LNKMEDIAIEPART_repopulate.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKEMPPRODUCTINSTANCE_PSID_repopulate.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEPARTSHISTORY.sql" />
+    <Build Include="SISSEARCH\Functions\fn_CONSISTPARTSORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITCONSISTPART_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_YELLOWMARKCONSISTPARTS_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_REMANCONSISTPARTS_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITCONSISTPARTS_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Views\vw_CONSISTPARTSORIGIN.sql" />
+    <Build Include="SISSEARCH\Views\vw_C.sql" />
+    <Build Include="SISSEARCH\Functions\fnSNP_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fnSNP.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SNP_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SMCS_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_PRODUCTSTRUCTURE_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_PRODUCTHIERARCHY_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITIEPART_ORIGIN2.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITIEPART_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Views\vw_PRODUCTSTRUCTURE_ORIGIN.sql" />
+    <Build Include="SISSEARCH\Views\vw_BASICPARTSORIGIN.sql" />
+    <Build Include="SISSEARCH\Views\vw_MEDIASNP.sql" />
+    <Build Include="SISSEARCH\Views\vw_MEDIAPRODUCTHIERARCHY.sql" />
+    <Build Include="SISSEARCH\Views\vw_MEDIAPRODUCTFAMILY.sql" />
+    <Build Include="SISSEARCH\Views\vw_MEDIAPRODUCT.sql" />
+    <Build Include="SISSEARCH\Views\vw_MEDIAINFOTYPE.sql" />
+    <Build Include="SISSEARCH\Views\vw_MASMEDIAUPDATEDDATE.sql" />
+    <Build Include="SISSEARCH\Views\vw_MASMEDIATITLE.sql" />
+    <Build Include="SISSEARCH\Views\vw_MASMEDIAPUBLISHEDDATE.sql" />
+    <Build Include="SISSEARCH\Views\vw_MASMEDIANUMBER.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEPARTSHISTORY12N.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEPARTSHISTORY_RAW.sql" />
+    <Build Include="SISSEARCH\Views\vw_CONSISTPARTSHISTORY.sql" />
+    <Build Include="SISSEARCH\Views\vw_CONSISTPARTS.sql" />
+    <Build Include="SISSEARCH\Views\vw_BASICSERVICEMEDIA.sql" />
+    <Build Include="SISSEARCH\Views\vw_BASICPARTS.sql" />
+    <Build Include="SISSEARCH\Views\vw_BASEMEDIA.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\WriteLog.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SIS2NPRPARTHISTORYPERSIST_LOAD.sql" />
+    <Build Include="SISSEARCH\Stored Procedures\SetProcTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\GetProcTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\GetOperationTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\fn_StringEscapeExtra.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SetProcTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SetLogTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\fn_GetProcTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\fn_GetLogTimeStamp.sql" />
+    <Build Include="SISSEARCH\Functions\tvf_StringParsePipe.sql" />
+    <Build Include="SISSEARCH\Functions\tvf_StringParse.sql" />
+    <Build Include="SISSEARCH\Functions\fn_YELLOWMARKCONSISTPARTS.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SNP.sql" />
+    <Build Include="SISSEARCH\Functions\fn_SMCS.sql" />
+    <Build Include="SISSEARCH\Functions\fn_REMANCONSISTPARTS.sql" />
+    <Build Include="SISSEARCH\Functions\fn_PRODUCTSTRUCTURE.sql" />
+    <Build Include="SISSEARCH\Functions\fn_PRODUCTHIERARCHY.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITIEPART.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITCONSISTPARTS.sql" />
+    <Build Include="SISSEARCH\Functions\fn_KITCONSISTPART.sql" />
+    <Build Include="SISSEARCH\Functions\fn_CONSISTPARTS.sql" />
+    <Build Include="sis_stage\Sequences\SequenceSIS2ASSHIPPEDENGINEID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKMEDIAIEPART_Refresh_SHADOW_Table.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKCONSISTLIST_Refresh_SHADOW_Table.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEIMAGE_Refresh_SHADOW_Table.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\PART_SUPERSESSIONCHAIN_Load.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\PART_SUPERSESSIONCHAIN_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\PART_TRANSLATION_Load.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\PART_TRANSLATION_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Sequences\CCR_RID.sql" />
+    <Build Include="SISWEB_OWNER\Sequences\CCRREPAIRSTATUSSEQUENCE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKIEIMAGE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKIEIMAGE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKIEPSID.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKIEPSID_BASE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEPSID_Refresh_SHADOW_Table.sql" />
+    <Build Include="SISWEB_OWNER\Functions\tvf_MediaSourceAndOrigin.sql" />
+    <Build Include="sis\Functions\fn_SupersessionChain_to_JSON.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedSupersessionChains.sql" />
+    <Build Include="SISSEARCH\Views\vw_CONSISTPARTSHISTORY.sql" />
+    <Build Include="SISSEARCH\Views\vw_CONSISTPARTSHISTORY_ORIGIN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKPARTSIESNP_Refresh_SHADOW_Table.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKPARTSIESNP.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKPARTSIESNP_BASE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFO.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKNPRINFO.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKNPRINFO_Merge.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaFamily.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaNumber.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaPublishedDate.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaSerialNumber.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaTitle.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaUpdatedDate.sql" />
+    <Build Include="SISSEARCH\Views\vw_ConsolidatedMedia.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaInfoType_sis.sql" />
+    <Build Include="sis\Tables\PartHistory.sql" />
+    <Build Include="sis\Tables\PartsWithRelatedParts.sql" />
+    <Build Include="sis\Tables\IEPart_SNP_TopLevel.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaFamily_Origin.sql" />
+    <Build Include="SISSEARCH\Views\vw_MediaRestrictionCode.sql" />
+    <Build Include="sis\Tables\Country_Translation.sql" />
+    <Build Include="sis\Tables\Country.sql" />
+    <Build Include="sis_stage\Stored Procedures\Country_Load.sql" />
+    <Build Include="sis\Tables\Country_Translation.sql" />
+    <Build Include="sis\Tables\Country.sql" />
+    <Build Include="sis_stage\Stored Procedures\Country_Load.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEMedia_Origin.sql" />
+    <Build Include="SISSEARCH\Views\vw_BasicServiceIE_Origin.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEMedia.sql" />
+    <Build Include="SISSEARCH\Views\vw_IESMCS.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEProductStructure.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEProductCodes.sql" />
+    <Build Include="SISSEARCH\Views\vw_IETitle.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEPublishedDate.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEMediaNumbers.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEUpdatedDate.sql" />
+    <Build Include="SISSEARCH\Views\vw_IERestrictionCode.sql" />
+    <Build Include="SISSEARCH\Views\vw_ConsolidatedServiceIE.sql" />
+    <Build Include="SISSEARCH\Views\vw_IESerialNumber.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEFamily_Origin.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEFamily.sql" />
+    <Build Include="sis\Tables\CaptivePrime_Serial.sql" />
+    <Build Include="sis_stage\Stored Procedures\CaptivePrime_Serial_Load.sql" />
+    <Build Include="util\Tables\CommandLog.sql" />
+    <Build Include="util\Tables\QueueDatabase.sql" />
+    <Build Include="util\Tables\Queue.sql" />
+    <Build Include="util\Stored Procedures\IndexOptimize.sql" />
+    <Build Include="util\Stored Procedures\CommandExecute.sql" />
+    <Build Include="Security\util.sql" />
+    <Build Include="sis_stage\Tables\Chain_Temp.sql" />
+    <Build Include="SISSEARCH\Views\vw_ProductCodes.sql" />
+    <Build Include="SISSEARCH\Views\vw_IEControlNumber.sql" />
+    <Build Include="sis\Tables\SMCS_IEPart_Relation.sql" />
+    <Build Include="KIM\Tables\SIS_KitEffectivity.sql" />
+    <Build Include="admin\Tables\Reason.sql" />
+    <Build Include="admin\Stored Procedures\AccessProfile_Permission_Load.sql" />
+    <Build Include="admin\Stored Procedures\WriteLog.sql" />
+    <Build Include="admin\Tables\Log.sql" />
+    <Build Include="etl_stage\Tables\SerialNumber.sql" />
+    <Build Include="sis\Stored Procedures\KIM_Data_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_Category_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_Hard_Delete.sql" />
+    <Build Include="sis\Stored Procedures\Kit_Effectivity_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_ImageIdentifier_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_ParentPart_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\Kit_Type_Relation_Merge.sql" />
+    <Build Include="sis\Stored Procedures\KitBillOfMaterial_Merge.sql" />
+    <Build Include="sis\Stored Procedures\KitCategory_Merge.sql" />
+    <Build Include="sis\Stored Procedures\KitComponent_Merge.sql" />
+    <Build Include="sis\Stored Procedures\KitType_Merge.sql" />    
+    <Build Include="sis\Stored Procedures\Kit_Media_Relation_Merge.sql" />
+    <Build Include="sis\Tables\Kit.sql" />
+    <Build Include="sis\Tables\Kit_ImageIdentifier.sql" />
+    <Build Include="sis\Tables\Kit_ParentPart_Relation.sql" />
+    <Build Include="sis\Tables\KitBillOfMaterial.sql" />
+    <Build Include="sis\Tables\KitComponent.sql" />
+    <Build Include="sis\Tables\KitType.sql" />
+    <Build Include="sis\Tables\KitCategory.sql" />
+    <Build Include="sis\Tables\Kit_Effectivity.sql" />
+    <Build Include="sis\Tables\Kit_Media_Relation.sql" />
+    <Build Include="sis\Tables\Kit_Category_Relation.sql" />
+    <Build Include="sis\Tables\Kit_Type_Relation.sql" />
+    <Build Include="sis\Tables\NprInfo.sql" />
+    <Build Include="sis\Tables\NprInfoRecType23.sql" />
+    <Build Include="sis\Tables\NprInfoRecType456.sql" />
+    <Build Include="sis\Functions\tvf_ProductHistory_Details.sql" />
+    <Build Include="sis\Functions\tvf_ProductHistory_Details_v2.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKNPRINFORECTYPE456.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKNPRINFORECTYPE23.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFORECTYPE456.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFORECTYPE23.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKNPRINFORECTYPE456_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKNPRINFORECTYPE23_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKKITIEMEDIA_Load.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKKITIEMEDIA_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEEFFECTIVEDATES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKIEEFFECTIVEDATES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEEFFECTIVEDATES_Merge.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKRELATEDPARTIES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\PART_IMAGEIDENTIFIER.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKATTACHMENTTYPETOPSID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKRELATEDPARTIES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKATTACHMENTTYPETOPSID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKRELATEDPARTIES_Merge.sql" />
+    <Build Include="sis\Functions\tvf_Serial_Number_Filtration_Logic_v1.sql" />
+    <Build Include="sis\Functions\tvf_ServiceSoftwareFile_Details.sql" />
+    <Build Include="sis\Tables\MediaBundle.sql" />
+    <Build Include="sis_stage\Stored Procedures\SMCS_IEPart_Relation_Load.sql" />
+    <Build Include="sis\Stored Procedures\SMCS_IEPart_Relation_Delete.sql" />
+    <Build Include="sis_stage\Stored Procedures\SerialNumber_Media_Relation_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\SerialNumber_Load.sql" />
+    <Build Include="sis\Stored Procedures\SerialNumber_Media_Relation_Delete.sql" />
+    <Build Include="sis\Stored Procedures\SerialNumber_Delete.sql" />
+    <Build Include="sis\Stored Procedures\CaptivePrime_Serial_Delete.sql" />
+    <Build Include="sis\Tables\SerialNumber_Media_Relation.sql" />
+    <Build Include="sis\Tables\SerialNumber.sql" />
+    <Build Include="sis_stage\Stored Procedures\ServiceFile_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\ServiceFile_DisplayTerms_Load.sql" />
+    <Build Include="sis_stage\Stored Procedures\ServiceFile_DisplayTerms_Translation_Load.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKPARTSIESNP_LNKIEPSID_RANGE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKPARTSIESNP_LNKIEPSID_NORANGE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKPARTSIESNP_LNKIEPSID_RANGE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKPARTSIESNP_LNKIEPSID_NORANGE_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKPARTSIESNP_LNKIEPSID_RANGE_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKPARTSIESNP_LNKIEPSID_NORANGE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKPARTSIESNP_LNKIEPSID_RANGE_repopulate.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKPARTSIESNP_LNKIEPSID_NORANGE_repopulate.sql" />
+    <Build Include="util\Functions\udf_HTMLDecode.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKATTACHMENTDESCRIPTION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKATTACHMENTDESCRIPTION.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCONFIGURATIONTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCONFIGURATIONTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRFRAGMENTEDPARTNAMES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCCRGROUPIESCN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRGROUPIESCN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRGROUPPARTS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRMEDIATITLE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRTECHDOCSNP.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCCRTECHDOCSNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRUPDATEPARTS.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCCRUPDATEPARTS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRUPDATES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCCRUPDATES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKCCRVIRTUALIESCN.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKCCRVIRTUALIESCN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEADAPTABLESNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIECCRSNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKPARTNAMESSOURCE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASCCRMEDIA.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASCCRMEDIA.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASCCROPERATIONS.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASCCROPERATIONS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASCCRREPAIRTYPES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASCCRREPAIRTYPES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASCCRSEGMENTS.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASCCRSEGMENTS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASCCRUPDATETYPES.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASCCRUPDATETYPES.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASREPAIRDESCRIPTIONS.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASREPAIRDESCRIPTIONS.sql" />
+    <Build Include="SISWEB_OWNER\Tables\EMPPRODUCTFAMILY_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\EMPPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\EMPSALESMODEL_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\PARTSPDF_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKPARTSPDFPSID_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKPDFPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKIEPRODUCTINSTANCE_BASE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASSPNSOURCE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SPUD_UPDATE_PERIODS.sql" />
+    <Build Include="sis_stage\Stored Procedures\Full_Load_P7.sql" />
+    <Build Include="dbo\Tables\FlushedQueryPlans.sql" />
+    <Build Include="dbo\Types\UDTT_LNKIEIMAGE_MASIMAGELOCATION_INSERT_IN.sql" />
+    <Build Include="dbo\Types\UDTT_LNKTRANSLATEDSPN_INSERT_IN.sql" />
+    <Build Include="dbo\Types\UDTT_MEDIANUBERIESYSTEMCONTROLNUMBER.sql" />
+    <Build Include="dbo\Types\UDTT_PDF_PRODUCTINSTANCE_INSERT_IN.sql" />
+    <Build Include="dbo\Types\UDTT_PRODUCTINSTANCE_INSERT_IN.sql" />
+    <Build Include="dbo\Types\UDTT_MEDIANUMBER.sql" />
+    <Build Include="dbo\Stored Procedures\FlushAndSavePoorPlans.sql" />
+    <Build Include="sis\Tables\StaticIllustration_File.sql" />
+    <Build Include="sis\Tables\StaticIllustration.sql" />
+    <Build Include="sis\Tables\IE_StaticIllustration_Relation.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Sequences\SEQ_RID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2SSFBLOBLOCATION.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Views\FLASH_FILE_PROPERTIES.sql" />
+    <Build Include="sis_stage\Tables\IEPart_IEPart_Relation.sql" />
+    <Build Include="sis\Tables\IEPart_IEPart_Relation.sql" />
+    <Build Include="sis_stage\Stored Procedures\IEPart_IEPart_Relation_Load.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_IEPart_Relation_Merge.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\NPRINDICATOR_Update.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFO_SWAP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFORECTYPE23_SWAP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKNPRINFORECTYPE456_SWAP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASEPSSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSSPRINGSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSALTITUDESPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSAPPLICATIONSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSCERTIFICATIONSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSCOLORSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSPOWERSETPLPPSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSREFERENCESPECS1.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSREFERENCESPECS2.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSSPRINGSPACERSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSTESTDATASPECS1.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSTESTDATASPECS2.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSTURBOASSEMBLYSPECS.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKEPSVEHICLESNPSPECS.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_GetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_FlashFileMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_FLashFileDeleteMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Delete_FLashFileMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Cylinder_GetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Delete_CylinderFileMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_CylinderFileMetadata.sql" />
+    <Build Include="sis_stage\Types\UDTT_SIS2ETL_GENERIC_SINGLE_VARCHAR_COLUMN.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SMCS_MDFY.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SMCS_JOB.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SMCS_DESC.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SMCS_CMPNT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PROD_CNFGR_SN_REL.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PROD_CNFGR_DLET.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PROD_CNFGR_DESC.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\PROD_CNFGR_ATT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEORIGINALPSID.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Views\VW_MASREPAIRDESCRIPTIONS.sql" />
+    <Build Include="sis\Tables\IEPart_Effective_Dates.sql" />
+    <Build Include="sis\Stored Procedures\IEPart_Effective_Date_Merge.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Effective_Date.sql" />
+    <Build Include="sis_stage\Tables\IEPart_Effective_Date_Diff.sql" />
+    <Build Include="sis_stage\Stored Procedures\IEPart_Effective_Date_Load.sql" />
+    <Build Include="SISSEARCH\Tables\REF_SELECTIVE_EXCLUDEINFOTYPE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKPARTINFORMATION.sql" />
+    <Build Include="admin\Tables\ExternalLinkGroup.sql" />
+    <Build Include="Security\EXTERNAL.sql" />
+    <Build Include="EXTERNAL\Views\vw_ServiceIE_MetaData.sql" />
+    <Build Include="EXTERNAL\Views\vw_PartsIE_Metadata.sql" />
+    <Build Include="EXTERNAL\Views\vw_Media_MetaData.sql" />
+    <Build Include="EXTERNAL\Views\vw_UserProfile.sql" />
+    <Build Include="admin\Tables\User_Cleanup_Audit.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKRESTRICTEDSNP.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKSNPDATE.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\MASIECONTENT.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\SIS2GRAPHICS.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKMEDIAIEPART_SNP_TOPLEVEL_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKMEDIAIEPART_SNP_TOPLEVEL.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKMEDIAIEPART_SNP_TOPLEVEL_BASE.sql" /> 
+    <Build Include="sis\Views\vw_LNKMEDIAIEPART_SNP_TopLevel.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKEMPPRODUCTINSTANCE_PSID_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SWAP\Tables\LNKEMPPRODUCTINSTANCE_PSID.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKEMPPRODUCTINSTANCE_PSID_BASE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Tables\LNKEMPPRODUCTINSTANCE_LNKMEDIAIEPART_BASE.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKEMPPRODUCTINSTANCE_LNKMEDIAIEPART_BASE.sql" />
+    <Build Include="sis\Functions\tvf_ProductStructureOutlineCaptiveToPrime_v1_1.sql" />
+    <Build Include="sis\Functions\tvf_ProductStructureOutlineCaptiveToPrime_v2.sql" />
+    <Build Include="Security\EMP_STAGING.sql" />
+    <Build Include="EMP_STAGING\Functions\_getLastSynchVersion.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\_setLastSynchVersion.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\SupersessionChainEMP_Load.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\SupersessionChainEMP_Insert.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\SupersessionChainEMPHIST_Load.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\PARTSPDF_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPARTSPDFPSID_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPDFPRODUCTINSTANCE_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPPRODUCTFAMILY_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPSALESMODEL_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPPRODUCTINSTANCE_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKIEPRODUCTINSTANCE_Insert_Update_Delete.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\PARTSPDF_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPARTSPDFPSID_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPDFPRODUCTINSTANCE_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPPRODUCTFAMILY_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPSALESMODEL_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKIEPRODUCTINSTANCE_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\EMPPRODUCTINSTANCE_Refresh_SHADOW_Table.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPARTSIESNP_Insert.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\LNKPARTSIESNP_Load.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKCONSISTLIST.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKIEIMAGE.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKIEINFOTYPE.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKIEPRODUCTINSTANCE.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKIEPSID.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKMEDIAIEPART.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKPARTSIESNP.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKPDFPRODUCTINSTANCE.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKPARTSPDFPSID.sql" />
+    <Build Include="EMP_STAGING\Tables\LNKTRANSLATEDSPN.sql" />
+    <Build Include="EMP_STAGING\Tables\MASIMAGELOCATION.sql" />
+    <Build Include="EMP_STAGING\Tables\MASMEDIA.sql" />
+    <Build Include="EMP_STAGING\Tables\PARTSPDF.sql" />
+    <Build Include="EMP_STAGING\Tables\EMPPRODUCTFAMILY.sql" />
+    <Build Include="EMP_STAGING\Tables\EMPPRODUCTINSTANCE.sql" />
+    <Build Include="EMP_STAGING\Tables\EMPSALESMODEL.sql" />
+    <Build Include="EMP_STAGING\Tables\SCPART.sql" />
+    <Build Include="EMP_STAGING\Tables\SCPARTHIST.sql" />
+    <Build Include="EMP_STAGING\Tables\SCSUPERSEDEDPART.sql" />
+    <Build Include="EMP_STAGING\Tables\SCSUPERSEDEDPARTHIST.sql" />
+    <Build Include="EMP_STAGING\Tables\SIS2GRAPHICLOCATION.sql" />
+    <Build Include="EMP_STAGING\Tables\SUPERSESSIONCHAINS.sql" />
+    <Build Include="EMP_STAGING\Tables\EMPETLJOB.sql" />
+    <Build Include="EMP_STAGING\Tables\EMPETLJOBRESPONSE.sql" />
+    <Build Include="EMP_STAGING\Tables\EXTRACTIONJOBSTATUS.sql" />
+    <Build Include="EMP_STAGING\Tables\_LAST_SYNCHRONIZATION_VERSIONS.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_DELETE_PART_INFORMATION.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_DELETE_PDF_INFORMATION.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_MERGE_LNKIEIMAGE_MASIMAGELOCATION.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_MERGE_LNKTRANSLATEDSPN.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_MERGE_PART_PRODUCTINSTANCE.sql" />
+    <Build Include="EMP_STAGING\Stored Procedures\UDSP_MERGE_PDF_PRODUCTINSTANCE.sql" />
+    <Build Include="Security\etl_stage.sql" />
+    <Build Include="etl_stage\Tables\IEPart.sql" />
+    <Build Include="etl_stage\Tables\IEPart_Effective_Date.sql" />
+    <Build Include="etl_stage\Tables\IEPart_Effectivity.sql" />
+    <Build Include="etl_stage\Tables\IEPart_Illustration_Relation.sql" />
+    <Build Include="etl_stage\Tables\Media.sql" />
+    <Build Include="etl_stage\Tables\Media_Effectivity.sql" />
+    <Build Include="etl_stage\Tables\Media_InfoType.sql" />
+    <Build Include="etl_stage\Tables\Media_Translation.sql" />
+    <Build Include="etl_stage\Tables\MediaSequence.sql" />
+    <Build Include="etl_stage\Tables\Part.sql" />
+    <Build Include="etl_stage\Tables\Part_IEPart_Relation.sql" />
+    <Build Include="etl_stage\Tables\ProductStructure_IEPart_Relation.sql" />
+    <Build Include="etl_stage\Tables\SMCS_IEPart_Relation.sql" />
+    <Build Include="sis_stage\Tables\ssf_sisecm_foreignlang.sql" />
+    <Build Include="sis_stage\Tables\ssf_sisecm.sql" />
+    <Build Include="sis_stage\Tables\ssf_sissoft.sql" />
+    <Build Include="sis_stage\Tables\ssf_sisprod.sql" />
+    <Build Include="sis_stage\Tables\ssf_sisprod_diff.sql" />
+    <Build Include="sis_stage\Tables\ssf_sisprod_last_run.sql" />
+    <Build Include="sis_stage\Tables\ssf_flash_application_engine_related_lookup.sql" />
+    <Build Include="sis_stage\Tables\ssf_Output_FlashFileDeleteMetadata.sql" />
+    <Build Include="sis_stage\Tables\ssf_Output_SSFGetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_ReplacementHierarchy_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms_Translation_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_DisplayTerms_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_Reference_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_SearchCriteria_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ServiceFile_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\ssf_sistele.sql" />
+    <Build Include="sis_stage\Tables\ssf_Output_SSF_EcmGetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Tables\FlashApplication_sis2Etl.sql" />
+    <Build Include="sis_stage\Tables\FlashApplication_Translation_sis2Etl.sql" />
+    <Build Include="etl_stage\Stored Procedures\UDSP_DELETE_PARTBOOK.sql" />
+    <Build Include="etl_stage\Stored Procedures\UDPS_EPS_Merge_SerialNumber.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SFF_Load_FlashSerialNumbers.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Delete_FLashFileMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_GetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_FLashFileDeleteMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_FlashFileMetadata.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_ReplacementHierarchy.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Merge_FlashApplication.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_InjectorFile.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Ecm_GetOrGenerateFileRid.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_ECM.sql" />
+    <Build Include="sis_stage\Stored Procedures\UDSP_SIS2ETL_SSF_Load_SisteleFileData.sql" />
+    <Build Include="sis_stage\Synonyms\FlashApplication_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\FlashApplication_Translation_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_DisplayTerms_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_DisplayTerms_Translation_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_Reference_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_ReplacementHierarchy_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_SearchCriteria_Syn.sql" />
+    <Build Include="sis_stage\Synonyms\ServiceFile_Syn.sql" />
+    <Build Include="sis_stage\Types\UDTT_SIS2ETL_GENERIC_SINGLE_VARCHAR_COLUMN.sql" />
+    <Build Include="etl_stage\Stored Procedures\WriteLog.sql" />
+    <Build Include="SOC\Tables\serialNumberAvailability.sql" />
+    <Build Include="sis\Views\vw_IEMediaOrigin.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SISWEB_OWNER\Tables\LNKPRODUCT_PARTIAL.sql" />
+    <Build Include="SISWEB_OWNER\Tables\MASPRODUCT_PARTIAL.sql" />
+    <Build Include="admin\Tables\ExternalFile.sql" />
+    <Build Include="admin\Tables\ExternalFile_Translation.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\_getModifiedRowsPercentage.sql" />
+    <Build Include="PRODUCTSEARCH\Stored Procedures\WriteLog.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKCONSISTLIST.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKEMPPRODUCTINSTANCE_LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\EMPPRODUCTFAMILY.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKPARTSIESNP_LNKIEPSID_NORANGE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKPARTSIESNP.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKMEDIAIEPART_SNP_TOPLEVEL.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKIEPSID.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKIEPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKIEIMAGE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKEMPPRODUCTINSTANCE_PSID.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\EMPPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\PARTSPDF.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKPDFPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKPARTSPDFPSID.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\LNKPARTSIESNP_LNKIEPSID_RANGE.sql" />
+    <Build Include="SISWEB_OWNER\Synonyms\EMPSALESMODEL.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\EMPPRODUCTFAMILY.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\EMPPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\PARTSPDF.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKIEPSID.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKIEPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKIEIMAGE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKEMPPRODUCTINSTANCE_PSID.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKEMPPRODUCTINSTANCE_LNKMEDIAIEPART.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKCONSISTLIST.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\EMPSALESMODEL.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKPDFPRODUCTINSTANCE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKPARTSPDFPSID.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKPARTSIESNP_LNKIEPSID_RANGE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKPARTSIESNP_LNKIEPSID_NORANGE.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKPARTSIESNP.sql" />
+    <Build Include="SISWEB_OWNER_SHADOW\Synonyms\LNKMEDIAIEPART_SNP_TOPLEVEL.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\UPDATESTATS_SET_SYNONYMS_MULTIPLE_TABLES.sql" />
+    <Build Include="sis\Stored Procedures\html_getSynonymMismatchErrors.sql" />
+    <Build Include="SISWEB_OWNER\Tables\LNKIEMEDIAPART.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Tables\LNKIEMEDIAPART.sql" />
+    <Build Include="SISWEB_OWNER_STAGING\Stored Procedures\LNKIEMEDIAPART_Insert_Update_Delete.sql" />
+    <Build Include="sis\Tables\Part_IE_Effectivity.sql" />
+    <Build Include="sis\Tables\Part_ImageIdentifier.sql" />
+    <Build Include="sis\Stored Procedures\Part_IE_Effectivity_Merge.sql" />
+    <Build Include="sis_stage\Tables\Part_IE_Effectivity.sql" />
+    <Build Include="sis_stage\Stored Procedures\Part_IE_Effectivity_Load.sql" />
+    <Build Include="sis\Views\vw_ServiceEffectivity.sql" />
+    <Build Include="sis\Views\vw_TroubleshootingInfo.sql" />
+    <Build Include="sis\Views\vw_TroubleshootingConfigurationInfo.sql" />        
+    <Build Include="sis\Views\vw_AsShippedEngine.sql" />
+    <Build Include="Security\sissearch2.sql" />
+    <Build Include="sissearch2\Tables\Basic_Parts.sql" />
+    <Build Include="sissearch2\Tables\Basic_ServiceIE.sql" />
+    <Build Include="sissearch2\Tables\Basic_ServiceMedia.sql" />
+    <Build Include="sissearch2\Tables\Consolidated_ServiceIE.sql" />
+    <Build Include="sissearch2\Tables\Consolidated_ServiceSoftwareFiles.sql" />
+    <Build Include="sissearch2\Tables\Consolidated_Media.sql" />
+    <Build Include="sissearch2\Tables\ConsolidatedTroubleshootingDocuments.sql" />
+    <Build Include="sissearch2\Tables\KitConsistParts.sql" />
+    <Build Include="sissearch2\Tables\KitIEPart.sql" />
+    <Build Include="sissearch2\Tables\Log.sql" />
+    <Build Include="sissearch2\Tables\Media_InfoType.sql" />
+    <Build Include="sissearch2\Tables\Media_ProductFamily.sql" />
+    <Build Include="sissearch2\Tables\Media_ProductHierarchy.sql" />
+    <Build Include="sissearch2\Tables\ProductHierarchy.sql" />
+    <Build Include="sissearch2\Tables\Media_RestrictAccess.sql" />
+    <Build Include="sissearch2\Tables\Media_SNP.sql" />
+    <Build Include="sissearch2\Tables\ProductStructure.sql" />
+    <Build Include="sissearch2\Tables\SMCS.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_Media.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_ProductStructure.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_ProductFamily.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_ProductHierarchy.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_RestrictAccess.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_SMCS.sql" />
+    <Build Include="sissearch2\Tables\ServiceIE_SNP.sql" />
+    <Build Include="sissearch2\Tables\SNP.sql" />
+    <Build Include="sissearch2\Tables\Ref_ExcludeInfoType.sql" />
+    <Build Include="sissearch2\Tables\Ref_Selective_ExcludeInfoType.sql" />
+    <Build Include="sissearch2\Tables\RemanConsistParts.sql" />
+    <Build Include="sissearch2\Tables\RemanIEPart.sql" />
+    <Build Include="sissearch2\Tables\YellowmarkConsistParts.sql" />
+    <Build Include="sissearch2\Tables\YellowmarkIEPart.sql" />
+    <Build Include="sissearch2\Tables\ConsistParts.sql" />
+    <Build Include="sissearch2\Tables\ExpandedMiningProductParts.sql" />
+    <Build Include="sissearch2\Tables\Consolidated_Parts.sql" />
+    <Build Include="sissearch2\Stored Procedures\WriteLog.sql" />
+    <Build Include="sissearch2\Stored Procedures\Basic_Parts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Basic_ServiceMedia_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Consolidated_Media_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Consolidated_ServiceSoftwareFiles_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ConsolidatedTroubleshootingDocuments_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Media_InfoType_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Media_ProductFamily_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Media_ProductHierarchy_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ProductHierarchy_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Media_RestrictAccess_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Media_SNP_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ProductStructure_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\KitConsistParts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Basic_ServiceIE_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Consolidated_ServiceIE_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIE_Media_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIEProductFamily_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIEProductHierarchy_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIEProductStructure_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIERestrictAccess_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIESMCS_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ServiceIESNP_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\KitIEPart_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\SMCS_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\SNP_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\RemanConsistParts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\RemanIEPart_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\YellowmarkConsistParts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\YellowmarkIEPart_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ConsistParts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\ExpandedMiningProductParts_Load.sql" />
+    <Build Include="sissearch2\Stored Procedures\Consolidated_Parts_Load.sql" />
+    <Build Include="sis\Functions\fn_GetDefaultORGCODE.sql" />
+    <Build Include="sis\Functions\fn_GetDefaultORGCODESeparator.sql" />
+    <Build Include="sis\Functions\fn_GetOrgCodeBySeparator.sql" />
+    <Build Include="sis\Functions\fn_GetPartNumberBySeparator.sql" />
+    <Build Include="sis\Functions\tvf_AsShippedEngine_IESCN.sql" />
+    <Build Include="sis\Functions\tvf_TranslatedSupersessionChains_v2.sql" />
+    <Build Include="sis\Functions\tvf_MediaSourceAndOrigin.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SIS_DB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deploy Scripts\Lookup Tables\SOC.ComponentCodeCategories.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Deploy Scripts\Script.PreDeployment1.sql" />
+  </ItemGroup>
+  <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <PackageReference Condition="'$(NetCoreBuild)' == 'true'" Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <ArtifactReference Condition="'$(NetCoreBuild)' == 'true'" Include="$(NETCoreTargetsPath)\SystemDacpacs\AzureV12\master.dacpac">
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Condition="'$(NetCoreBuild)' != 'true'" Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

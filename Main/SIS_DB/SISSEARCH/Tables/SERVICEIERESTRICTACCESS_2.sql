@@ -1,0 +1,5 @@
+﻿CREATE TABLE [SISSEARCH].[SERVICEIERESTRICTACCESS_2] (
+    [IESystemControlNumber] VARCHAR (15)  NOT NULL,
+    [RestrictionCode]       VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([IESystemControlNumber] ASC)
+);

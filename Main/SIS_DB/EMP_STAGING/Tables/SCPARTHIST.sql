@@ -1,0 +1,33 @@
+CREATE TABLE [EMP_STAGING].[SCPARTHIST](
+    [SCPARTHIST_ID]                  INT    IDENTITY (1, 1)     NOT NULL,
+    [ADMINISTRATIVELOCKISNULL]       NUMERIC (1, 0),
+    [TYPEADMINISTRATIVELOCK]	     VARCHAR (150),
+    [AGGREGATEDTIMESTAMP]	         DATETIME2,
+    [DATASOURCE]	                 VARCHAR (600),
+    [CLASSNAMEKEYDOMAINREF]	         VARCHAR (600),
+    [IDA3DOMAINREF]                  NUMERIC,
+    [HASALTERNATES]                  NUMERIC (1,0),
+    [HASSUPERSESSION]	             NUMERIC (1,0),
+    [HASXREF]                        NUMERIC (1,0),
+    [INHERITEDDOMAIN]                NUMERIC (1,0),
+    [ORGNAME]                        VARCHAR (600),
+    [PARTNAME]	                     VARCHAR (600),
+    [PARTNUMBER]                     VARCHAR (600),
+    [SERVICEABLE]                    NUMERIC (1,0),
+    [SOURCENAME]                     VARCHAR (600),
+    [CREATESTAMPA2]                  DATETIME2,
+    [MARKFORDELETEA2]                NUMERIC,
+    [MODIFYSTAMPA2]                  DATETIME2,
+    [CLASSNAMEA2A2]                  VARCHAR (600),
+    [IDA2A2]                         NUMERIC,
+    [UPDATECOUNTA2]                  NUMERIC,
+    [UPDATESTAMPA2]                  DATETIME2,
+    [BRANCHIDA2TYPEDEFINITIONREFE]   NUMERIC,
+    [IDA2TYPEDEFINITIONREFERENCE]	 NUMERIC,
+    [INDEXERSINDEXERSET]             VARCHAR (4000),
+    [REFERENCED]                     NUMERIC (1, 0),
+    [SUPERSESSIONCHAIN]              VARCHAR (1000),
+    [PTC_STR_1TYPEINFOSCPART]        VARCHAR (1500)
+    CONSTRAINT [PK_SCPARTHIST] PRIMARY KEY CLUSTERED ([SCPARTHIST_ID] ASC)
+)
+

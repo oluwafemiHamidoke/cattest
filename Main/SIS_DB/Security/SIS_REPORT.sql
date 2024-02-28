@@ -1,0 +1,35 @@
+CREATE SCHEMA [SIS_REPORT]
+    AUTHORIZATION [dbo];
+
+
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+
+
+GO
+GRANT EXECUTE
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[SIS_REPORT] TO [sisautomation];
+

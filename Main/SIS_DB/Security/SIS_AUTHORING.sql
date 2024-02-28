@@ -1,0 +1,8 @@
+﻿CREATE SCHEMA [SIS_AUTHORING]
+    AUTHORIZATION [dbo];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[SIS_AUTHORING] TO [sisautomation];
+

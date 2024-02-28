@@ -1,0 +1,16 @@
+﻿CREATE TABLE [sis].[SMCS_IEPart_Relation] (
+    [SMCS_ID]   INT NOT NULL,
+    [IEPart_ID] INT NOT NULL,
+    [Media_ID]  INT NOT NULL,
+    [LastModified_Date] DATETIME2(0) NOT NULL DEFAULT(GETDATE()),
+    CONSTRAINT [PK_SMCS_IEPart_Relation] PRIMARY KEY CLUSTERED ([SMCS_ID] ASC, [IEPart_ID] ASC, [Media_ID]  ASC),
+    CONSTRAINT [FK_SMCS_IEPart_Relation_IEPart] FOREIGN KEY ([IEPart_ID]) REFERENCES [sis].[IEPart] ([IEPart_ID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_SMCS_IEPart_Relation_SMCS] FOREIGN KEY ([SMCS_ID]) REFERENCES [sis].[SMCS] ([SMCS_ID]),
+    CONSTRAINT [FK_SMCS_IEPart_Relation_Media] FOREIGN KEY ([Media_ID]) REFERENCES [sis].[Media] ([Media_ID])
+);
+GO
+CREATE NONCLUSTERED INDEX [IDX_SMCSIEPartRelation_IEPartID]
+ON [sis].[SMCS_IEPart_Relation] ([IEPart_ID]);
+GO
+CREATE NONCLUSTERED INDEX [SMCS_IEPart_Relation_Media_ID]
+ON [sis].[SMCS_IEPart_Relation] ([Media_ID])

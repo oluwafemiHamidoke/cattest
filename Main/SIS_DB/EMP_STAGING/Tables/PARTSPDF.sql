@@ -1,0 +1,16 @@
+CREATE TABLE [EMP_STAGING].[PARTSPDF] (
+    [PARTSPDF_ID]           INT    IDENTITY (1, 1) NOT NULL,
+    [MEDIANUMBER]           VARCHAR (8)            NOT NULL,
+    [PDFNUMBER]             VARCHAR (60)           NOT NULL,
+    [PDFFILENAME]           VARCHAR (60)           NOT NULL,
+    [PDFTYPE]               VARCHAR (30)           NOT NULL,
+    [REVISION]              INT                    NOT NULL,
+    [LANGUAGEINDICATOR]     VARCHAR (2)            NOT NULL,
+    [FILEPATH]              VARCHAR (512)          NOT NULL,
+    [FILESIZE]              INT                    NOT NULL
+    CONSTRAINT [PK_PARTSPDF] PRIMARY KEY CLUSTERED ([PARTSPDF_ID] ASC)
+);
+
+GO
+ALTER TABLE [EMP_STAGING].[PARTSPDF] ENABLE CHANGE_TRACKING WITH (TRACK_COLUMNS_UPDATED = ON);
+GO

@@ -1,0 +1,42 @@
+﻿CREATE SCHEMA [PRODUCTSEARCH]
+    AUTHORIZATION [dbo];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT EXECUTE
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[PRODUCTSEARCH] TO [sisautomation];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PRODUCTSEARCH] TO [sissearchdatasource];
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PRODUCTSEARCH] TO [empautomation];
+

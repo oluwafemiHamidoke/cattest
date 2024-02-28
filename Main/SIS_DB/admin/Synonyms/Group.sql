@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM admin.[Group] FOR admin.[Group_Details]

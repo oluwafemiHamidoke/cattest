@@ -1,0 +1,7 @@
+CREATE TABLE [sissearch2].[KitIEPart] (
+    [IESYSTEMCONTROLNUMBER] VARCHAR (12)  NOT NULL,
+    [ID]                    VARCHAR (50)  NOT NULL,
+    [KITIEPART]             VARCHAR (MAX) NULL,
+    [INSERTDATE]            DATETIME      NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);

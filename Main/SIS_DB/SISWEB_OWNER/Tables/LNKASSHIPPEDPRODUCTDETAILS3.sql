@@ -1,0 +1,32 @@
+﻿CREATE TABLE [SISWEB_OWNER].[LNKASSHIPPEDPRODUCTDETAILS3] (
+    [SERIALNUMBER]           VARCHAR (8)      NOT NULL,
+    [PARTSEQUENCENUMBER]     NUMERIC (10)     NOT NULL,
+    [PARTNUMBER]             VARCHAR (20)     NOT NULL,
+    [PARTNAME]               VARCHAR (512)    NOT NULL,
+    [PARENTPARTNUMBER]       VARCHAR (60)     NULL,
+    [ATTACHMENTSERIALNUMBER] VARCHAR (20)     NULL,
+    [SOURCELOCATION]         VARCHAR (1)      NOT NULL,
+    [EMDPROCESSEDDATE]       DATETIME2 (0)    NOT NULL,
+    [PARTTYPE]               VARCHAR (25)     NULL,
+    [ID]                     NUMERIC (38, 10) NOT NULL,
+    [LASTMODIFIEDDATE]       DATETIME2 (6)    NULL,
+    [isValidSerialNumber]    BIT              NULL,
+    [isValidPartNumber]      BIT              NULL,
+    [ID_Int]                 BIGINT           NULL,
+    [ParentID]               BIGINT           NULL,
+    [SNP]                    CHAR (3)         NULL,
+    [SNR]                    INT              NULL,
+    [ParentPartNumberShort]  VARCHAR (100)    NULL,
+    [PARTORDER]              NUMERIC (10)     NULL,
+    [PARTLEVEL]              NUMERIC (1)      NULL,
+    [PARENTAGE]              NUMERIC (38, 10) NULL,
+    CONSTRAINT [LNKASSHIPPEDPRODUCTDETAILS3_LNKASSHIPPEDPRODUCTDETAILS3_PK] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [LNKASSHIPPEDPRODUCTDETAILS3_PARENTPARTNUMBER_NC]
+    ON [SISWEB_OWNER].[LNKASSHIPPEDPRODUCTDETAILS3]([SERIALNUMBER] ASC, [PARTNUMBER] ASC, [PARENTPARTNUMBER] ASC);
+

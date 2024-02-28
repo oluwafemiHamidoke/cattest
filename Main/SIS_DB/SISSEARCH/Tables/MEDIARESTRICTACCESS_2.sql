@@ -1,0 +1,5 @@
+﻿CREATE TABLE [SISSEARCH].[MEDIARESTRICTACCESS_2] (
+    [BaseEngMediaNumber] VARCHAR (15)  NOT NULL,
+    [RestrictionCode]    VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([BaseEngMediaNumber] ASC)
+);

@@ -1,0 +1,17 @@
+﻿CREATE   FUNCTION [SISSEARCH].[fn_KITCONSISTPART_ORIGIN](@DATE DATETIME)
+	RETURNS TABLE
+AS
+RETURN select 
+    b.IESYSTEMCONTROLNUMBER,
+	string_escape(translate(isnull(k.PARTNUMBER,'')+':'+isnull(k.RELATEDPARTNUMBER,'')+':'+isnull(k.RELATEDPARTNAME, ''),
+		char(8)+char(9)+char(10)+char(11)+char(12)+char(13), '      '),'json') as KITCONSISTPART,
+
+   b.LASTMODIFIEDDATE INSERTDATE
+from [SISWEB_OWNER_SHADOW].[LNKMEDIAIEPART] b With(NolocK)
+inner join [SISWEB_OWNER].[MASMEDIA] e with(Nolock)
+	on e.MEDIANUMBER=b.MEDIANUMBER and e.[MEDIASOURCE]='A'  --Authoring 
+inner join [SISWEB_OWNER_SHADOW].LNKCONSISTLIST d With(Nolock) --56M
+	on b.IESYSTEMCONTROLNUMBER = d.IESYSTEMCONTROLNUMBER
+inner join [sis].[vw_RelatedPartsNoKits] k
+	on k.PARTNUMBER = d.PARTNUMBER and k.TYPEINDICATOR in ('CL', 'Y')
+WHERE b.LASTMODIFIEDDATE > @DATE

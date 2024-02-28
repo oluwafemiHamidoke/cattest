@@ -1,0 +1,37 @@
+CREATE TABLE [EMP_STAGING].[SCPART](
+    [SCPART_ID]            INT    IDENTITY (1, 1)     NOT NULL,
+    [SESSIONID]            NUMERIC (10, 0)            NULL,
+    [AGGREGATEDTIMESTAMP]  DATETIME2 (7)              NULL,
+    [DATASOURCE]           VARCHAR (12)               NULL,
+    [HASALTERNATES]        VARCHAR (12)               NULL,
+    [HASSUPERSESSION]      VARCHAR (12)               NULL,
+    [HASXREF]              VARCHAR (12)               NULL,
+    [ORGCODE]              VARCHAR (12)               NULL,
+    [PARTNAME]             VARCHAR (128)              NULL,
+    [PARTNUMBER]           VARCHAR (128)              NULL,
+    [SERVICEABLE]          NUMERIC (1, 0)             NULL,
+    [SOURCENAME]           VARCHAR (128)              NULL,
+    [DOMAINPATH]           VARCHAR (10)               NULL,
+    [CREATEDDATE]          DATETIME2 (7)              NULL,
+    [MODIFIEDDATE]         DATETIME2 (7)              NULL,
+    [TYPE]                 VARCHAR (128)              NULL,
+    [WBMSOURCEDESCRIPTION] VARCHAR (10)               NULL,
+    [WBMSOURCEIDENTIFIER]  VARCHAR (10)               NULL,
+    [WBMLOADACTION]        VARCHAR (128)              NULL
+    CONSTRAINT [PK_SCPART] PRIMARY KEY CLUSTERED ([SCPART_ID] ASC)
+)
+
+
+GO
+ALTER TABLE [EMP_STAGING].[SCPART] ENABLE CHANGE_TRACKING WITH (TRACK_COLUMNS_UPDATED = ON);
+GO
+
+GO
+CREATE NONCLUSTERED INDEX IX_SCPART_PARTNUMBER
+    ON EMP_STAGING.SCPART (PARTNUMBER ASC);
+GO
+
+CREATE NONCLUSTERED INDEX IX_SCPART_ORGCODE
+    ON EMP_STAGING.SCPART (ORGCODE ASC);
+GO
+

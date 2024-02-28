@@ -1,0 +1,12 @@
+-- This Script needs to be run manually on the respective DB instances
+
+-- DECLARE @START_SEQ NUMERIC (38)
+-- SET @START_SEQ = (SELECT MAX(FILERID)+1 FROM [SISWEB_OWNER_STAGING].[MASFILEPROPERTIES]);
+
+-- DECLARE @sql NVARCHAR(200)
+-- SET @sql = 'CREATE SEQUENCE [SISWEB_OWNER_STAGING].[SEQ_RID] 
+--  AS [INT]
+--  START WITH ' + CAST(@START_SEQ AS VARCHAR(50))
+--  + 'INCREMENT BY 1'
+
+-- EXEC(@sql)

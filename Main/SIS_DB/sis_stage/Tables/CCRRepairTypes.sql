@@ -1,0 +1,10 @@
+CREATE TABLE [sis_stage].[CCRRepairTypes](
+	[CCRRepairTypes_ID] [int] IDENTITY(1,1) NOT NULL,
+	[RepairTypeIndicator] [char](1) NOT NULL,
+	[SequenceNumber] [int] NOT NULL,
+ CONSTRAINT [PK_CCRRepairTypes] PRIMARY KEY CLUSTERED 
+(
+	[CCRRepairTypes_ID] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

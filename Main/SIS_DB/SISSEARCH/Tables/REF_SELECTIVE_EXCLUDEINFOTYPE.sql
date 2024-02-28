@@ -1,0 +1,7 @@
+﻿CREATE TABLE [SISSEARCH].[REF_SELECTIVE_EXCLUDEINFOTYPE]
+(
+	[InfoTypeID] SMALLINT NOT NULL,
+	[Excluded_Values] varchar(2) not null,
+	PRIMARY KEY CLUSTERED ([InfoTypeID] ASC,[Excluded_Values] ASC)
+)
+GO 

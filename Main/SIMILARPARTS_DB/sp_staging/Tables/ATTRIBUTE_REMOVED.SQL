@@ -1,0 +1,3 @@
+CREATE TABLE [sp_staging].[ATTRIBUTE_REMOVED](
+		[NAME] [nvarchar](255) NULL
+) ON [PRIMARY] ;

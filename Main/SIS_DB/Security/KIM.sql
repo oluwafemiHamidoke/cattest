@@ -1,0 +1,29 @@
+﻿CREATE SCHEMA [KIM]
+    AUTHORIZATION [dbo];
+
+
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[KIM] TO [sisadf];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[KIM] TO [sisadf];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[KIM] TO [sisadf];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[KIM] TO [sisadf];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[KIM] TO [sisadf];

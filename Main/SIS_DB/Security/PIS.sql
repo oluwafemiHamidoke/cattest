@@ -1,0 +1,26 @@
+CREATE SCHEMA [PIS]
+    AUTHORIZATION [dbo];
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[PIS] TO [sisadf];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PIS] TO [sisadf];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[PIS] TO [sisadf];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[PIS] TO [sisadf];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[PIS] TO [sisadf];

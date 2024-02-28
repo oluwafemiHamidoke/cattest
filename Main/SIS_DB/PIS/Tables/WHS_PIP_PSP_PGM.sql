@@ -1,0 +1,30 @@
+CREATE TABLE [PIS].[WHS_PIP_PSP_PGM](
+	[DLR_CD] [varchar](6) NOT NULL,
+	[PIP_PSP_NO] [varchar](7) NOT NULL,
+	[SER_NO_PFX] [varchar](3) NOT NULL,
+	[SER_NO_BDY] [varchar](5) NOT NULL,
+	[ANUN_IND] [varchar](1) NOT NULL,
+	[MAIL_IND] [varchar](1) NOT NULL,
+	[TOT_SER_NO_CT] [numeric](7, 0) NOT NULL,
+	[QTR_POP_CT] [numeric](7, 0) NOT NULL,
+	[TOT_CMPLT_CT] [numeric](7, 0) NOT NULL,
+	[TRN_DLR_CD] [varchar](6) NOT NULL,
+	[BDGT_CTL_CD] [varchar](4) NOT NULL,
+	[ENT_DT] [date] NOT NULL,
+	[CMPLT_DT] [date] NOT NULL,
+	[ACTV_DT] [date] NOT NULL,
+	[RPR_LBR_HR] [numeric](7, 2) NOT NULL,
+	[GROUP_NO] [numeric](3, 0) NOT NULL,
+	[LAST_UPDT_TS] [datetime2](6) NOT NULL,
+	[LAST_UPDT_CUPID] [varchar](10) NOT NULL,
+	[CRTE_TS] [datetime2](6) NOT NULL,
+	[CRTE_CUPID] [varchar](10) NOT NULL,
+ CONSTRAINT [WHS_PIP_PSP_PGM_WHS_PIP_PSP_PGM_PK] PRIMARY KEY CLUSTERED 
+(
+	[DLR_CD] ASC,
+	[PIP_PSP_NO] ASC,
+	[SER_NO_PFX] ASC,
+	[SER_NO_BDY] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

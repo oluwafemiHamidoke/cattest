@@ -1,0 +1,11 @@
+CREATE TABLE [sis].[CCRUpdateTypes](
+	[CCRUpdateTypes_ID]	INT NOT NULL,
+	[UpdateTypeIndicator] [char](1) NOT NULL,
+	[SequenceNumber] INT NOT NULL,
+	[LastModifiedDate] [datetime2](6) NULL,
+ CONSTRAINT [PK_CCRUpdateTypes] PRIMARY KEY CLUSTERED 
+(
+	[CCRUpdateTypes_ID] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

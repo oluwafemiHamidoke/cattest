@@ -1,0 +1,29 @@
+﻿CREATE SCHEMA [CDS]
+    AUTHORIZATION [dbo];
+
+
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[CDS] TO [sisadf];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[CDS] TO [sisadf];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[CDS] TO [sisadf];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[CDS] TO [sisadf];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[CDS] TO [sisadf];

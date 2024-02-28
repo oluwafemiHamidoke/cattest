@@ -1,0 +1,7 @@
+CREATE FUNCTION sis.fn_GetDefaultORGCODESeparator()
+RETURNS VARCHAR(1)
+AS
+    BEGIN
+		RETURN ':';
+    END;
+GO

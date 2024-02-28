@@ -1,0 +1,70 @@
+CREATE FUNCTION [sis].[tvf_TranslatedSupersessionChains](@LANGUAGE_CODE VARCHAR(2)  = 'en'
+														,@PART_NUMBER   VARCHAR(50)
+														,@ORG_CODE      VARCHAR(12))
+RETURNS @RETURN_DATASET TABLE (SUPERSESSIONCHAIN_ID         INT NOT NULL
+							  ,TRANSLATED_SUPERSESSIONCHAIN NVARCHAR(MAX) NOT NULL) 
+AS
+BEGIN
+	DECLARE	 @FALLBACK_LANGUAGEINDICATOR VARCHAR(1)
+			,@DESIRED_LANGUAGEINDICATOR  VARCHAR(1)
+           	,@ORGCODE_SEPARATOR VARCHAR(1) = sis.fn_GetDefaultORGCODESeparator()
+
+	DECLARE @SUPERSESSIONCHAINS TABLE (SupersessionChain_ID INT IDENTITY(1,1)
+									  ,SupersessionChain    VARCHAR(8000));
+	DECLARE @PART_NUMBERS AS TABLE (SupersessionChain_ID INT
+								   ,jKey                 INT 
+								   ,Part_Number          VARCHAR(50)
+								   ,Org_Code             VARCHAR(12));
+
+	SELECT @FALLBACK_LANGUAGEINDICATOR = L.Legacy_Language_Indicator
+	FROM sis.Language_Details AS L
+	WHERE L.Language_Code = 'en' AND 
+		  L.Default_Language = 1;
+	
+	SELECT @DESIRED_LANGUAGEINDICATOR = L.Legacy_Language_Indicator
+	FROM sis.Language_Details AS L
+	WHERE L.Language_Code = @LANGUAGE_CODE AND 
+		  L.Default_Language = 1;
+
+
+	DECLARE @TMPCHAIN TABLE (ID INT IDENTITY(1,1), CHAIN VARCHAR(8000))
+
+	INSERT INTO @TMPCHAIN (CHAIN)
+	SELECT DISTINCT CHAIN from [SISWEB_OWNER].[PART_SUPERSESSIONCHAIN] WHERE PARTNUMBER=@PART_NUMBER
+	
+
+	INSERT INTO @SUPERSESSIONCHAINS (SupersessionChain)
+	SELECT t1.CHAIN from @TMPCHAIN t1
+		WHERE NOT EXISTS 
+		(
+			SELECT 1 FROM @TMPCHAIN t2 
+			WHERE t1.ID<>t2.ID
+			AND CHARINDEX(t1.CHAIN,t2.CHAIN)>0
+		)
+
+	INSERT INTO @PART_NUMBERS
+	SELECT DISTINCT SC.SupersessionChain_ID, 
+					J.[key], 
+					sis.fn_GetPartNumberBySeparator(J.[value],':'),
+					sis.fn_GetOrgCodeBySeparator(J.[value],':','CAT')
+		   FROM @SUPERSESSIONCHAINS AS SC
+				CROSS APPLY OPENJSON(sis.fn_SupersessionChain_to_JSON (SC.SupersessionChain),'strict $') AS J;
+
+
+	INSERT INTO @RETURN_DATASET
+	SELECT PN.SupersessionChain_ID
+		   ,TRANSLATED_SUPERSESSIONCHAIN = STRING_AGG(PN.Part_Number + ':' + PN.Org_Code + ' ' + COALESCE(P1.PARTNAME,P2.PARTNAME,'--'),'|') 
+		   WITHIN GROUP (ORDER BY PN.jKey ASC)
+		   FROM @PART_NUMBERS AS PN
+		LEFT JOIN SISWEB_OWNER.PART_TRANSLATION AS P1
+		   ON PN.Part_Number = P1.PARTNUMBER AND
+			  PN.Org_Code    = P1.ORGCODE AND
+		      P1.LANGUAGEINDICATOR = @DESIRED_LANGUAGEINDICATOR
+		LEFT JOIN SISWEB_OWNER.PART_TRANSLATION AS P2
+		   ON PN.Part_Number = P2.PARTNUMBER AND
+              PN.Org_Code    = P2.ORGCODE AND
+		      P2.LANGUAGEINDICATOR = @FALLBACK_LANGUAGEINDICATOR
+		GROUP BY PN.SupersessionChain_ID;
+
+	RETURN;
+END;

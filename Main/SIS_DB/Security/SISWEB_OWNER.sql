@@ -1,0 +1,11 @@
+﻿CREATE SCHEMA [SISWEB_OWNER]
+    AUTHORIZATION [dbo];
+
+
+GO
+
+GRANT SELECT
+    ON SCHEMA::[SISWEB_OWNER] TO [sisautomation];
+GO
+
+

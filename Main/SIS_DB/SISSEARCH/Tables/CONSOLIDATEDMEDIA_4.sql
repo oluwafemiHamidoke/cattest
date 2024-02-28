@@ -1,0 +1,67 @@
+﻿CREATE TABLE [SISSEARCH].[CONSOLIDATEDMEDIA_4] (
+    [ID]                           VARCHAR (50)    NOT NULL,
+    [BaseEngMediaNumber]           VARCHAR (15)    NULL,
+    [INSERTDATE]                   DATETIME        NULL,
+    [MediaNumber]                  VARCHAR (15)    NULL,
+    [MediaTitle_en-US]             NVARCHAR (1536) NULL,
+    [MediaTitle_es-ES]             NVARCHAR (1536) NULL,
+    [MediaTitle_fr-FR]             NVARCHAR (1536) NULL,
+    [MediaTitle_pt-BR]             NVARCHAR (1536) NULL,
+    [MediaTitle_it-IT]             NVARCHAR (1536) NULL,
+    [MediaTitle_id-ID]             NVARCHAR (1536) NULL,
+    [MediaTitle_zh-CN]             NVARCHAR (1536) NULL,
+    [MediaTitle_de-DE]             NVARCHAR (1536) NULL,
+    [MediaTitle_ja-JP]             NVARCHAR (1536) NULL,
+    [MediaTitle_ru-RU]             NVARCHAR (1536) NULL,
+    [isMedia]                      BIT             NULL,
+    [Profile]                      VARCHAR (MAX)   NULL,
+    [InformationType]              VARCHAR (MAX)   NULL,
+    [SerialNumbers]                VARCHAR (MAX)   NULL,
+    [ProductCode]                  VARCHAR (500)   NULL,
+    [UpdatedDate]                  DATETIME        NULL,
+    [PubDate]                      DATETIME2 (7)   NULL,
+    [RestrictionCode]              VARCHAR (MAX)   NULL,
+    [PIPPSPNumber]                 VARCHAR (7)     NULL,
+    [familyCode]                   VARCHAR (MAX)   NULL,
+    [familySubFamilyCode]          VARCHAR (MAX)   NULL,
+    [familySubFamilySalesModel]    VARCHAR (MAX)   NULL,
+    [familySubFamilySalesModelSNP] VARCHAR (MAX)   NULL,
+    [MediaNumber_es-ES]            VARCHAR (15)    NULL,
+    [MediaNumber_zh-CN]            VARCHAR (15)    NULL,
+    [MediaNumber_fr-FR]            VARCHAR (15)    NULL,
+    [MediaNumber_it-IT]            VARCHAR (15)    NULL,
+    [MediaNumber_de-DE]            VARCHAR (15)    NULL,
+    [MediaNumber_pt-BR]            VARCHAR (15)    NULL,
+    [MediaNumber_id-ID]            VARCHAR (15)    NULL,
+    [MediaNumber_ja-JP]            VARCHAR (15)    NULL,
+    [MediaNumber_ru-RU]            VARCHAR (15)    NULL,
+    [PubDate_es-ES]                DATETIME2 (7)   NULL,
+    [PubDate_zh-CN]                DATETIME2 (7)   NULL,
+    [PubDate_fr-FR]                DATETIME2 (7)   NULL,
+    [PubDate_it-IT]                DATETIME2 (7)   NULL,
+    [PubDate_de-DE]                DATETIME2 (7)   NULL,
+    [PubDate_pt-BR]                DATETIME2 (7)   NULL,
+    [PubDate_id-ID]                DATETIME2 (7)   NULL,
+    [PubDate_ja-JP]                DATETIME2 (7)   NULL,
+    [PubDate_ru-RU]                DATETIME2 (7)   NULL,
+    [UpdatedDate_es-ES]            DATETIME        NULL,
+    [UpdatedDate_zh-CN]            DATETIME        NULL,
+    [UpdatedDate_fr-FR]            DATETIME        NULL,
+    [UpdatedDate_it-IT]            DATETIME        NULL,
+    [UpdatedDate_de-DE]            DATETIME        NULL,
+    [UpdatedDate_pt-BR]            DATETIME        NULL,
+    [UpdatedDate_id-ID]            DATETIME        NULL,
+    [UpdatedDate_ja-JP]            DATETIME        NULL,
+    [UpdatedDate_ru-RU]            DATETIME        NULL,
+    [mediaOrigin]                  VARCHAR (2)     NULL,
+    CONSTRAINT [PK_CONSOLIDATEDMEDIA_4] PRIMARY KEY CLUSTERED ([ID] ASC) 
+);
+
+
+
+
+
+GO
+ALTER TABLE [SISSEARCH].[CONSOLIDATEDMEDIA_4] ENABLE CHANGE_TRACKING WITH (TRACK_COLUMNS_UPDATED = OFF);
+
+

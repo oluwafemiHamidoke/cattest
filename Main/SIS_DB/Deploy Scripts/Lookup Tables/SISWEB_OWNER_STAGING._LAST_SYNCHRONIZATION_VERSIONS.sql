@@ -1,0 +1,22 @@
+﻿BEGIN TRANSACTION;
+
+DECLARE @ROWCOUNT INT;
+SELECT @ROWCOUNT = COUNT(*) FROM SISWEB_OWNER_STAGING._LAST_SYNCHRONIZATION_VERSIONS;
+
+IF @ROWCOUNT = 0
+BEGIN
+	PRINT 'Populating Lookup Table [SISWEB_OWNER_STAGING].[_LAST_SYNCHRONIZATION_VERSIONS]';
+
+	INSERT INTO SISWEB_OWNER_STAGING._LAST_SYNCHRONIZATION_VERSIONS
+	SELECT s.name + '.' + t.name AS Table_name
+		  ,tr.min_valid_version
+	  FROM sys.change_tracking_tables AS tr
+		   INNER JOIN sys.tables AS t ON t.object_id = tr.object_id
+		   INNER JOIN sys.schemas AS s ON s.schema_id = t.schema_id
+	  WHERE s.name = 'SISWEB_OWNER_STAGING'
+	  ORDER BY 1
+			  ,2;
+END;
+--ROLLBACK TRANSACTION
+COMMIT TRANSACTION;
+GO
